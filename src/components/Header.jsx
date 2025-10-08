@@ -43,16 +43,16 @@ export default function Header() {
               transition={{ type: "spring", stiffness: 200 }}
             >
               <Image
-                src="/blinndfolded.jpg"
-                height={56}
-                width={56}
+                src="/logo2.jpg"
+                height={100}
+                width={100}
                 alt="Advocate Profile"
-                className="shadow-lg object-cover object-top h-14 w-14 rounded-full"
+                className="shadow-lg h-16 w-16 object-cover  rounded-full"
               />
             </motion.div>
             <div className="ml-3">
-              <span className="text-xl font-bold text-black font-serif">
-                Advocate
+              <span className="text-xl  text-black font-serif">
+                Indian Law Masters
               </span>
               <br />
               <span className="text-sm text-gray-600 font-serif">
