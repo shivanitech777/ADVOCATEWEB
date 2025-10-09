@@ -7,9 +7,13 @@ import Image from "next/image";
 const nav = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "https://www.sci.gov.in", label: "Supreme Court" },
+  { href: "https://www.delhihighcourt.nic.in/web", label: "High Court" },
+  { href: "https://delhidistrictcourts.nic.in/", label: "District Court" },
   { href: "/practice-areas", label: "Practice Areas" },
   { href: "/contact", label: "Contact" },
 ];
+
 
 export default function Header() {
   const [open, setOpen] = useState(false);
