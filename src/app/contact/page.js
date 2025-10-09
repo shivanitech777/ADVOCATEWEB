@@ -1,4 +1,4 @@
-import Areas from '@/components/Areas'
+import Areas from '@/components/PracticeAreas'
 import ContactPage from '@/components/contact'
 import Hero from '@/components/hero'
 import React from 'react'
