@@ -5,7 +5,7 @@ import TargetSection from "@/components/Target";
 import AboutPage from "@/components/About";
 import ProcessSection from "@/components/ui/process";
 import FAQAndConsultation from "@/components/Factual";
-import Areas from "@/components/PracticeAreas";
+import PracticeAreas from  "@/components/PracticeAreas";
 import MissionValues from "@/components/MissionValues";
 
 
