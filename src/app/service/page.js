@@ -6,7 +6,7 @@ const Service = () => {
   return (
     <div className=' min-h-screen'>
       <Hero
-        heading="Our Services"
+        heading="Practice Areas"
         subtitle="Expert Legal Representation"
         description="Specialized practice areas including civil, criminal, family, and corporate law — tailored to your needs."
         banner="/hn.jpg"

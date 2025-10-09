@@ -10,36 +10,36 @@ import {
 } from "./ui/carousel"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { Merriweather, Inter } from "next/font/google"
+import { Playfair_Display, Lato } from "next/font/google"
 
-const merriweather = Merriweather({ subsets: ["latin"], weight: ["400", "700"] })
-const inter = Inter({ subsets: ["latin"], weight: ["400", "500"] })
+const playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "700"] })
+const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] })
 
 const slides = [
   {
-    title: "Your Legal Partner for Every Step",
-    subtitle: "Advocate • Legal Counsel",
+    title: "Your Trusted LegalAlly",
+    subtitle: "Advocate & Legal Consultant",
     description:
-      "Offering reliable representation and guidance for individuals and businesses. Together, we build strategies that protect your future.",
-    btn1: "Book Consultation",
-    btn2: "Explore Services",
+      "Providing strategic legal counsel and representation with integrity, precision, and a client-first approach. Every case handled with diligence and commitment to justice.",
+    btn1: "Book a Consultation",
+    btn2: "Our Practice Areas",
     image: "/blinndfolded.jpg",
   },
   {
-    title: "Justice Made Accessible",
-    subtitle: "Trusted Advocate",
+    title: "Defending Rights, Delivering Justice",
+    subtitle: "Committed to Ethical Advocacy",
     description:
-      "Clear communication, honest advice, and effective legal solutions — simplifying complex cases for your peace of mind.",
-    btn1: "Schedule a Call",
-    btn2: "View Practice Areas",
+      "We simplify complex legal matters through transparent advice, strong representation, and dependable solutions—ensuring every client feels informed and protected.",
+    btn1: "Schedule a Meeting",
+    btn2: "Explore Our Services",
     image: "/zz.jpg",
   },
   {
-    title: "Guiding You With Integrity",
-    subtitle: "Your Legal Guide",
+    title: "Experience. Integrity. Results.",
+    subtitle: "Your Partner in Every Legal Challenge",
     description:
-      "Combining years of experience with a client-first approach, ensuring personalized solutions for every legal challenge.",
-    btn1: "Get Started",
+      "Backed by years of expertise, we combine in-depth legal knowledge with personalized strategies to safeguard your rights and achieve favorable outcomes.",
+    btn1: "Get Legal Assistance",
     btn2: "Learn More",
     image: "/hn.jpg",
   },
@@ -62,19 +62,19 @@ const DemoHero = () => {
                     className="w-full lg:w-1/2 text-center lg:text-left"
                   >
                     <p
-                      className={`${inter.className} text-[#C5A25A] uppercase tracking-wider text-sm mb-3`}
+                      className={`${lato.className} text-[#C5A25A] uppercase tracking-wider text-sm mb-3`}
                     >
                       {slide.subtitle}
                     </p>
 
                     <h1
-                      className={`${merriweather.className} text-5xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-[#E5C071] via-[#C5A25A] to-[#B08B3F] text-transparent bg-clip-text leading-tight`}
+                      className={`${playfair.className} text-5xl sm:text-6xl font-serif py-4 mb-6 bg-gradient-to-r from-[#E5C071] via-[#C5A25A] to-[#B08B3F] text-transparent bg-clip-text leading-tight`}
                     >
                       {slide.title}
                     </h1>
 
                     <p
-                      className={`${inter.className} text-[#DADADA] mb-10 max-w-xl mx-auto lg:mx-0 text-lg leading-relaxed`}
+                      className={`${lato.className} text-[#DADADA] mb-10 max-w-xl mx-auto lg:mx-0 text-lg leading-relaxed`}
                     >
                       {slide.description}
                     </p>
@@ -82,19 +82,18 @@ const DemoHero = () => {
                     <div className="flex gap-4 justify-center lg:justify-start">
                       <a
                         href="/contact"
-                        className={`${inter.className} inline-flex items-center justify-center px-7 py-3 bg-[#C5A25A] text-[#0B1C2A] font-semibold rounded-none shadow hover:shadow-[0_6px_20px_rgba(0,0,0,0.25)] hover:scale-102 transition duration-300`}
+                        className={`${lato.className} inline-flex items-center justify-center px-7 py-3 bg-[#C5A25A] text-[#0B1C2A] font-serif rounded-none shadow hover:shadow-[0_6px_20px_rgba(0,0,0,0.25)] hover:scale-102 transition duration-300`}
                       >
                         {slide.btn1}
                       </a>
                       <a
                         href="/service"
-                        className={`${inter.className} inline-flex items-center justify-center px-7 py-3 border border-[#C5A25A] text-[#C5A25A] rounded-none font-medium hover:bg-[#C5A25A] hover:text-[#0B1C2A] transition duration-300`}
+                        className={`${lato.className} inline-flex items-center justify-center px-7 py-3 border border-[#C5A25A] text-[#C5A25A] rounded-none font-serif hover:bg-[#C5A25A] hover:text-[#0B1C2A] transition duration-300`}
                       >
                         {slide.btn2}
                       </a>
                     </div>
                   </motion.div>
-
 
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9, y: 30 }}
