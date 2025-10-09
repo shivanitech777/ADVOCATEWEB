@@ -99,7 +99,7 @@ const DemoHero = () => {
                     initial={{ opacity: 0, scale: 0.9, y: 30 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="w-full lg:w-1/2 hidden mdflex justify-center lg:justify-end"
+                    className="w-full lg:w-1/2 hidden md:flex justify-center lg:justify-end"
                   >
                     <motion.div
                       whileHover={{ scale: 1.03 }}

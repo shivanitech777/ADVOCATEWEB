@@ -14,7 +14,6 @@ const nav = [
   { href: "/contact", label: "Contact" },
 ];
 
-
 export default function Header() {
   const [open, setOpen] = useState(false);
 
@@ -35,7 +34,7 @@ export default function Header() {
       className="w-full bg-white/70 backdrop-blur sticky top-0 z-50 border-b border-gray-200 shadow-sm"
     >
       <div className="w-full max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      
+    
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -45,17 +44,18 @@ export default function Header() {
             <motion.div
               whileHover={{ rotate: 2, scale: 1.05 }}
               transition={{ type: "spring", stiffness: 200 }}
+              
             >
               <Image
                 src="/logo2.jpg"
                 height={100}
                 width={100}
                 alt="Advocate Profile"
-                className="shadow-lg h-16 w-16 object-cover  rounded-full"
+                className="shadow-lg h-16 w-16 object-cover rounded-full"
               />
             </motion.div>
             <div className="ml-3">
-              <span className="text-xl  text-black font-serif">
+              <span className="text-xl text-black font-serif">
                 Indian Law Masters
               </span>
               <br />
@@ -65,6 +65,7 @@ export default function Header() {
             </div>
           </Link>
         </motion.div>
+
 
         <nav className="hidden md:block">
           <ul className="flex items-center gap-6">
@@ -76,25 +77,45 @@ export default function Header() {
                 initial="hidden"
                 animate="visible"
               >
-                <Link
-                  href={item.href}
-                  className="relative px-3 py-2 text-sm font-medium text-gray-800 hover:text-[#C5A25A] transition-colors duration-300 font-serif"
-                >
-                  <motion.span whileHover={{ y: -2 }}>
-                    {item.label}
-                  </motion.span>
-                  <motion.div
-                    className="absolute left-0 bottom-0 h-[2px] bg-[#C5A25A] w-full origin-left scale-x-0"
-                    whileHover={{ scaleX: 1 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                </Link>
+                {item.href.startsWith("http") ? (
+                  
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative px-3 py-2 text-sm font-medium text-gray-800 hover:text-[#C5A25A] transition-colors duration-300 font-serif"
+                  >
+                    <motion.span whileHover={{ y: -2 }}>
+                      {item.label}
+                    </motion.span>
+                    <motion.div
+                      className="absolute left-0 bottom-0 h-[2px] bg-[#C5A25A] w-full origin-left scale-x-0"
+                      whileHover={{ scaleX: 1 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </a>
+                ) : (
+                
+                  <Link
+                    href={item.href}
+                    className="relative px-3 py-2 text-sm font-medium text-gray-800 hover:text-[#C5A25A] transition-colors duration-300 font-serif"
+                  >
+                    <motion.span whileHover={{ y: -2 }}>
+                      {item.label}
+                    </motion.span>
+                    <motion.div
+                      className="absolute left-0 bottom-0 h-[2px] bg-[#C5A25A] w-full origin-left scale-x-0"
+                      whileHover={{ scaleX: 1 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </Link>
+                )}
               </motion.li>
             ))}
           </ul>
         </nav>
 
-        
+   
         <motion.div whileTap={{ scale: 0.9 }} className="md:hidden">
           <button
             aria-label="Toggle menu"
@@ -136,7 +157,7 @@ export default function Header() {
         </motion.div>
       </div>
 
-    
+      
       <AnimatePresence>
         {open && (
           <motion.div
@@ -156,13 +177,25 @@ export default function Header() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.1, duration: 0.4 }}
                   >
-                    <Link
-                      href={item.href}
-                      onClick={() => setOpen(false)}
-                      className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-[#C5A25A] font-serif transition-colors"
-                    >
-                      {item.label}
-                    </Link>
+                    {item.href.startsWith("http") ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setOpen(false)}
+                        className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-[#C5A25A] font-serif transition-colors"
+                      >
+                        {item.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        onClick={() => setOpen(false)}
+                        className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-[#C5A25A] font-serif transition-colors"
+                      >
+                        {item.label}
+                      </Link>
+                    )}
                   </motion.li>
                 ))}
               </ul>

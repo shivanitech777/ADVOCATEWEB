@@ -36,8 +36,8 @@ const FAQAndConsultation = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="text-[#C5A25A] mb-2">Any Questions ?</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Frequently Asked Questions</h2>
+          <p className="text-[#C5A25A] m">Any Questions ?</p>
+          <h2 className="text-3xl md:text-4xl font-[Playfair_Display]  mb-6">Frequently Asked Questions</h2>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
@@ -79,8 +79,8 @@ const FAQAndConsultation = () => {
           viewport={{ once: true }}
           className="bg-white border border-[#C5A25A]/12 p-6 shadow-sm"
         >
-          <p className="text-[#C5A25A] mb-2">Schedule For</p>
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Free Consultation</h2>
+          <p className="text-[#C5A25A] mb-2 font-[Playfair_Display] ">Schedule For</p>
+          <h2 className="text-2xl md:text-3xl font-[Playfair_Display]  mb-4">Free Consultation</h2>
 
           <form className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
