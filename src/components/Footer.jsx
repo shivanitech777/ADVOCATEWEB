@@ -16,9 +16,9 @@ export default function Footer() {
           transition={{ duration: 0.6 }}
         >
           <div className="flex items-start gap-4 mb-4">
-            <div className="text-4xl">🏛️</div>
+          <Image src={"/logo2.jpg"} width={70} height={70} className="rounded-full"/>
             <div>
-              <h2 className="text-2xl font-bold text-white">Advocate</h2>
+              <h2 className="text-2xl font-bold text-white">Indian Law Masters</h2>
               <p className="text-sm text-[#C5A25A] tracking-wide">House of Lawyers</p>
             </div>
           </div>
@@ -130,8 +130,8 @@ export default function Footer() {
       </div>
       <div className="max-w-7xl mx-auto px-6 mt-10 border-t border-[#0f2938] pt-6 text-sm text-gray-400">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div>© {new Date().getFullYear()} Advocate — All rights reserved.</div>
-          <div>Designed by Advocate Firm · Privacy · Terms</div>
+          <div>© {new Date().getFullYear()} Advocate — Indian Law Masters.</div>
+          <div>Designed by Desire Div· Privacy · Terms</div>
         </div>
       </div>
     </footer>
