@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, Scale, BookOpen } from "lucide-react";
 import MissionValues from "./MissionValues";
 import Count from "./Count";
 import TargetSection from "./Target";
