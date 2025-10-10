@@ -27,6 +27,16 @@ const courts = [
 export default function CourtTypes() {
   return (
     <div className="bg-white text-gray-900 py-20 px-6 md:px-16">
+
+          <motion.h2
+          className="text-3xl md:text-4xl font-bold text-[#0b1526] mx-auto text-center mb-5"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+           Types of Courts in  <span className="text-[#C5A25A]">India</span>
+        </motion.h2>
   
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -35,9 +45,7 @@ export default function CourtTypes() {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <h2 className="text-4xl md:text-5xl font-bold text-yellow-600 mb-4">
-          Types of Courts in India
-        </h2>
+     
         <p className="text-gray-600 max-w-2xl mx-auto">
           India’s judiciary functions through a structured system of courts,
           ensuring justice at every level — from local matters to constitutional
@@ -54,7 +62,7 @@ export default function CourtTypes() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="bg-yellow-50 rounded-2xl p-8 shadow-lg border border-yellow-300 hover:shadow-yellow-400/60 hover:scale-105 transition-transform duration-300"
+            className="bg-yellow-50 rounded p-8 shadow-lg border border-yellow-300 hover:shadow-yellow-400/60 hover:scale-105 transition-transform duration-300"
           >
             <div className="flex justify-center mb-6">{court.icon}</div>
             <h3 className="text-2xl font-semibold text-yellow-700 mb-3 text-center">

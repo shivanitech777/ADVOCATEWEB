@@ -9,7 +9,7 @@ const nav = [
   { href: "/about", label: "About" },
   { href: "https://www.sci.gov.in", label: "Supreme Court" },
     { submenu : [
-      { href: "https://ecourts.gov.in/ecourts_home/index.php"  , label: "District Court" },
+      { href: "https://ecourts.gov.in/ecourts_home/index.php"  , label: "Delhi high Court" },
       { href: "https://allahabadhighcourt.in/" , label: "Allahabad High Court" },
       { href: "https://bombayhighcourt.nic.in/" , label: "Bombay High Court" },
       { href: "https://www.calcuttahighcourt.gov.in/" , label: "Calcutta High Court" },
@@ -31,11 +31,10 @@ const nav = [
       { href: "https://www.punjabhighcourt.gov.in/" , label: "Punjab & Haryana High Court" },
       { href: "https://rajasthanhighcourt.nic.in/" , label: "Rajasthan High Court" },
       { href: "https://sikkimhighcourt.nic.in/" , label: "Sikkim High Court" },
-      { href: "https://thc.nic.in/" , label: "Tripura High Court" },
       { href: "https://www.keralajudiciary.gov.in/kerala-high-court.html" , label: "Kerala High Court" },
-      { href: "https://www.keralajudiciary.gov.in/kerala-high-court.html" , label: "Uttarakhand High Court" },
-      { href: "https://www.keralajudiciary.gov.in/kerala-high-court.html" , label: "Uttar Pradesh High Court" },
-      { href: "https://www.wbja.nic.in/" , label: "West Bengal High Court" },
+      { href: "https://thc.nic.in/" , label: "Tripura High Court" },
+      { href: "https://highcourtofuttarakhand.gov.in/" , label: "Uttarakhand High Court" },
+  
       
    
     ], label: "High Court" },

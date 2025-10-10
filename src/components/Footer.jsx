@@ -19,7 +19,7 @@ const nav = [
 
   return (
     <footer className="bg-[#071428] text-gray-200 py-14">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
 
 
         <motion.div
