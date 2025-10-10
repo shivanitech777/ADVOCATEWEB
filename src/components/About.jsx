@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import MissionValues from "./MissionValues";
-import Count from "./Count";
 import TargetSection from "./Target";
 import Image from "next/image";
 import ProcessSection from "./ui/process";
@@ -20,7 +19,7 @@ export default function AboutPage({ show }) {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-[Playfair_Display] mb-6 tracking-wide text-[#C5A25A]">
               About Our Chambers
             </h1>
-            <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-700 font-light">
+            <p className="max-w-2xl mx-auto text-base sm:text-lg   md:text-xl text-gray-700 font-light">
               Dedicated to upholding justice, integrity, and unwavering advocacy for our clients.
             </p>
           </motion.div>
@@ -52,7 +51,7 @@ export default function AboutPage({ show }) {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-2xl sm:text-3xl font-[Playfair_Display] text-[#0b1526] mb-4">
+            <h3 className="text-3xl  sm:text-4xl font-[Playfair_Display] text-[#0b1526] mb-3">
               Meet Our Founder
             </h3>
             <p className="mb-4 text-base sm:text-lg leading-relaxed text-black">
@@ -63,18 +62,20 @@ export default function AboutPage({ show }) {
               we bring clarity, strategy, and precision to every case. Our chambers specialize in civil, criminal, and corporate law, guided by a belief that justice must be accessible, fair, and fearless.
             </p>
             <p className="text-black leading-relaxed text-base sm:text-lg">
-              We pride ourselves on discretion, diligence, and dedication. From courtroom representation to corporate counsel, every client is treated with respect and confidentiality. Our mission is rooted in delivering outcomes that align with both justice and ethics — ensuring trust remains our strongest argument.
+              We pride ourselves on discretion, diligence, and dedication. From courtroom representation to corporate counsel, every client is treated with respect and confidentiality. 
+              This profession carries a great deal of responsibility, as an advocate acts as a bridge between justice and those who seek it. 
+              By representing their clients with diligence and integrity, advocates play a vital role in ensuring a fair and equitable legal system.
+            but in making a tangible difference in people&apos;s lives and contributing to the greater good of society. This passion for the law and dedication to our clients is what drives us forward, a philosophy that is shared and exemplified by our founder. Their vision laid the groundwork for a practice built on integrity and excellence.  Our mission is rooted in delivering outcomes that align with both justice and ethics — ensuring trust remains our strongest argument.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Reusable Sections */}
       <MissionValues />
-      <Count />
+      
       <TargetSection />
 
-      {/* Legal Team Section */}
+ 
       <section className="py-12 px-4 sm:px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-xl sm:text-2xl font-[Playfair_Display] text-[#0b1526]">
@@ -127,10 +128,8 @@ export default function AboutPage({ show }) {
         </div>
       </section>
 
-      {/* Process Section */}
       <ProcessSection />
 
-      {/* Call to Action */}
       <section className="py-12 px-4 sm:px-6 bg-[#f9fafb]">
         <div className="max-w-6xl mx-auto text-center">
           <h3 className="text-xl sm:text-2xl font-[Playfair_Display] text-[#0b1526]">

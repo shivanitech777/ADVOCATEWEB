@@ -5,6 +5,18 @@ import { FaFacebookF, FaTwitter, FaPinterestP, FaLinkedinIn } from "react-icons/
 import { FiSend, FiPhone, FiMail, FiClock, FiGlobe } from "react-icons/fi";
 
 export default function Footer() {
+
+const nav = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "https://www.sci.gov.in", label: "Supreme Court" },
+  { href: "https://www.delhihighcourt.nic.in/web", label: "High Court" },
+  { href: "https://delhidistrictcourts.nic.in/", label: "District Court" },
+  { href: "/practice-areas", label: "Practice Areas" },
+  { href: "/contact", label: "Contact" },
+];
+
+
   return (
     <footer className="bg-[#071428] text-gray-200 py-14">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
@@ -131,7 +143,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 mt-10 border-t border-[#0f2938] pt-6 text-sm text-gray-400">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div>© {new Date().getFullYear()} Advocate — Indian Law Masters.</div>
-          <div>Designed by Desire Div· Privacy · Terms</div>
+          <div>Designed by 
+            <a href="https://desirediv.com/" target="_blank" rel="noopener noreferrer" className="text-[#C5A25A] hover:underline">
+              Desire Div</a>· Privacy · Terms</div>
         </div>
       </div>
     </footer>

@@ -23,15 +23,15 @@ const MissionValues = () => {
   };
 
   return (
-    <section className="w-full bg-white text-[#0b1526] py-20 px-6">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+    <section className="w-full bg-white text-[#0b1526] py-20 px-6"   >
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
 
         <motion.div
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
           variants={container}
-          className="space-y-6"
+          className="space-y-5"
         >
           <motion.div variants={item}>
             <h3 className="text-4xl font-semibold text-[#C5A25A]">Our Mission</h3>

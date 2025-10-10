@@ -95,19 +95,12 @@ const FAQAndConsultation = () => {
                 className="w-full px-4 py-3 bg-[#f8fafb] border border-gray-200 text-[#0b1526] focus:outline-none"
               />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
-                type="text"
-                placeholder="Phone"
+                type="number"
+                placeholder="Your Number"
                 className="w-full px-4 py-3 bg-[#f8fafb] border border-gray-200 text-[#0b1526] focus:outline-none"
               />
-              <select className="w-full px-4 py-3 bg-[#f8fafb] border border-gray-200 text-[#0b1526] focus:outline-none">
-                <option>Business Law</option>
-                <option>Family Law</option>
-                <option>Criminal Law</option>
-                <option>Civil Law</option>
-              </select>
-            </div>
+           
             <textarea
               placeholder="Your Message"
               rows={4}
