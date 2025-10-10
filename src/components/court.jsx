@@ -27,7 +27,7 @@ const courts = [
 export default function CourtTypes() {
   return (
     <div className="bg-white text-gray-900 py-20 px-6 md:px-16">
-      {/* Header Animation */}
+  
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ export default function CourtTypes() {
         </p>
       </motion.div>
 
-      {/* Court Cards */}
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         {courts.map((court, index) => (
           <motion.div

@@ -45,20 +45,7 @@ const nav = [
           </p>
 
 
-          <div className="flex gap-3 mt-5">
-            {[FaFacebookF, FaTwitter, FaPinterestP, FaLinkedinIn].map(
-              (Icon, idx) => (
-                <motion.a
-                  key={idx}
-                  whileHover={{ scale: 1.05 }}
-                  className="p-2 bg-[#0f2633] hover:bg-[#C5A25A] transition-colors cursor-pointer text-white"
-                  aria-label={`social-${idx}`}
-                >
-                  <Icon size={16} />
-                </motion.a>
-              )
-            )}
-          </div>
+          
         </motion.div>
 
         <motion.div
@@ -73,58 +60,41 @@ const nav = [
             We denounce with righteous indignation and dislike men who are so beguiled.
           </p>
           <ul className="space-y-3 text-sm">
-            <li className="flex items-center gap-2 text-gray-200"><FiGlobe /> New Delhi, Civil Court Complex</li>
+            <li className="flex items-center gap-2 text-gray-200"><FiGlobe /> New Delhi,Indian Law Master</li>
             <li className="flex items-center gap-2 text-gray-200"><FiPhone /> +91 98765 43210</li>
-            <li className="flex items-center gap-2 text-gray-200"><FiMail /> info@advocatefirm.com</li>
+            <li className="flex items-center gap-2 text-gray-200"><FiMail /> info@IndianLawMaster.com</li>
             <li className="flex items-center gap-2 text-gray-200"><FiClock /> Mon - Sat: 09:00 - 18:00</li>
           </ul>
         </motion.div>
 
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <h3 className="text-lg font-semibold text-white mb-4 border-l-2 border-[#C5A25A] pl-3">
-            Latest News
-          </h3>
-          <div className="space-y-4 text-sm">
-            <div className="flex gap-3">
-              <Image src="/hii.jpg" alt="news" className="w-14 h-14 object-cover" width={100} height={100} />
-              <div>
-                <p className="text-[#C5A25A]">Best Education Law and Training</p>
-                <span className="text-xs text-gray-300">29 October 2025</span>
-              </div>
-            </div>
-            <div className="flex gap-3">
-              <Image src="/blinndfolded.jpg" alt="news" className="w-14 h-14 object-cover" width={100} height={100} />
-              <div>
-                <p className="text-[#C5A25A]">Flexible Working Hours</p>
-                <span className="text-xs text-gray-300">30 October 2025</span>
-              </div>
-            </div>
-            <div className="flex gap-3">
-              <Image src="/p.jpg" alt="news" className="w-14 h-14 object-cover" width={100} height={100} />
-              <div>
-                <p className="text-[#C5A25A]">The Top Law Students</p>
-                <span className="text-xs text-gray-300">21 October 2025</span>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
+        
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           <h3 className="text-lg font-semibold text-white mb-4 border-l-2 border-[#C5A25A] pl-3">
-            Subscribe to Our Newsletter
+         Social Media Platforms
           </h3>
           <p className="text-sm text-gray-300">
-            Join our newsletter for legal tips, firm updates, and event invitations.
+          Connect Us With 
+
           </p>
+          <div className="flex gap-3 mt-5">
+            {[FaFacebookF, FaTwitter, FaPinterestP, FaLinkedinIn].map(
+              (Icon, idx) => (
+                <motion.a
+                  key={idx}
+                  whileHover={{ scale: 1.05 }}
+                  className="p-2 bg-[#0f2633] hover:bg-[#C5A25A] transition-colors cursor-pointer text-white"
+                  aria-label={`social-${idx}`}
+                >
+                  <Icon size={16} />
+                </motion.a>
+              )
+            )}
+          </div>
           <div className="flex mt-5">
             <form className="flex w-full" onSubmit={(e) => e.preventDefault()}>
               <input
