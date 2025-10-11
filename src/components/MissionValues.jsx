@@ -65,7 +65,7 @@ const MissionValues = () => {
               viewport={{ once: true }}
             >
               <Image
-                src="/building.jpg"
+                src="/hn.jpg"
                 alt="Courthouse building"
                 width={1200}
                 height={600}

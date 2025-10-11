@@ -35,7 +35,7 @@ export default function AboutPage({ show }) {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="w-full h-[300px] sm:h-[400px] md:h-[500px] overflow-hidden rounded-md shadow-xl border border-[#C5A25A]/20">
+            <div className="w-full h-[300px] sm:h-[400px] md:h-[500px] overflow-hidden  shadow-xl border border-[#C5A25A]/20">
               <Image
                 src="/hn.jpg"
                 alt="Advocate Portrait"
