@@ -43,31 +43,33 @@ const TargetSection = () => {
   }
 
   return (
-    <section className="w-full bg-white text-[#0b1526] py-20 px-6">
-      <div className="max-w-6xl mx-auto text-center">
-        <motion.h2
-          className="text-3xl md:text-4xl font-bold text-[#0b1526]"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          Our Focused Approach <span className="text-[#C5A25A]">for Clients</span>
-        </motion.h2>
+    <section className="w-full bg-white text-[#0b1526] py-10 px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center">
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold text-[#0b1526]"
+            initial={{ opacity: 0, y: -16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            Our Focused Approach <span className="text-[#C5A25A]">for Clients</span>
+          </motion.h2>
 
-        <motion.p
-          className="mt-4 text-gray-600 max-w-2xl mx-auto"
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.15 }}
-          viewport={{ once: true }}
-        >
-          We combine careful preparation, clear communication, and strategic execution to secure
-          outcomes that protect what matters to you.
-        </motion.p>
+          <motion.p
+            className="mt-3 text-gray-600 max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, delay: 0.12 }}
+            viewport={{ once: true }}
+          >
+            We combine careful preparation, clear communication, and strategic execution to secure
+            outcomes that protect what matters to you.
+          </motion.p>
+        </div>
 
         <motion.div
-          className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -77,19 +79,20 @@ const TargetSection = () => {
             <motion.div
               key={i}
               variants={itemAnim}
-              className="bg-white border border-[#C5A25A]/20 shadow-sm hover:shadow-md transform hover:-translate-y-1 transition-all duration-200"
+              className="flex flex-col bg-white border border-[#F1F1F1] hover:border-[#E6D8B2] transition-colors duration-200"
             >
-              {/* Image on top */}
-              <div className="w-full h-44 overflow-hidden">
+              <div className="relative h-44 overflow-hidden">
                 <Image src={item.img} alt={item.title} width={1200} height={600} className="w-full h-full object-cover object-center" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0b1526]/30 to-transparent"></div>
               </div>
 
-              <div className="p-6">
-                <div className="w-12 h-12 mx-auto flex items-center justify-center bg-[#C5A25A]/10 mb-4">
+              <div className="p-5 flex-1 flex flex-col">
+                <div className="w-12 h-12 flex items-center justify-center border border-[#E8E8E8] mb-4">
                   {item.icon}
                 </div>
                 <h3 className="text-lg font-semibold mb-2 text-[#0b1526]">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
+                <p className="text-gray-600 mb-4 flex-1">{item.desc}</p>
+                <a className="inline-block mt-auto text-[#C5A25A] font-medium" href="#">Learn more →</a>
               </div>
             </motion.div>
           ))}

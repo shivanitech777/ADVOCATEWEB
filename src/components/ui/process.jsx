@@ -5,54 +5,100 @@ const processSteps = [
   {
     id: 1,
     title: "Understanding",
-    desc: "We believe in devoting sufficient time, listening to our clients while understanding their issues.",
+    desc: "We devote time to listen and understand your situation so we can build a tailored strategy.",
+    color: "from-[#C5A25A] to-[#E5C071]",
   },
   {
     id: 2,
     title: "Strategic Planning",
-    desc: "Our team formulates strategies to aggressively defend and contest your stance.",
+    desc: "We craft focused, practical strategies that prioritize the best outcome for your case.",
+    color: "from-[#C5A25A] to-[#E5C071]",
   },
   {
     id: 3,
-    title: "Implementing The Steps",
-    desc: "We ensure wholesome execution of the plan to achieve effective and fruitful results.",
+    title: "Implementation",
+    desc: "We execute the plan decisively, communicating progress and adapting as needed.",
+    color: "from-[#C5A25A] to-[#E5C071]",
   },
 ];
 
+const container = {
+  hidden: { opacity: 0, y: 12 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { staggerChildren: 0.14 },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 18 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
 const ProcessSection = () => {
   return (
-    <section className="w-full bg-white text-[#0b1526] py-20 px-6">
-      <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-4xl font-bold text-[#C5A25A] mb-2">Our Process</h2>
-        <p className="text-gray-600">A clear, practical workflow we follow for every client</p>
-        <div className="w-20 h-1 bg-[#C5A25A] mx-auto mt-4"></div>
+    <section className="w-full bg-white text-[#0b1526] py-10 px-6">
+      <div className="max-w-6xl mx-auto text-center mb-10">
+        <motion.h2
+          initial={{ opacity: 0, y: -12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-4xl font-bold text-[#0b1526]"
+        >
+          Our Process
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 6 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.08 }}
+          viewport={{ once: true }}
+          className="text-gray-600 mt-3 max-w-2xl mx-auto"
+        >
+          A clear, practical workflow we follow for every client — designed to be transparent,
+          efficient and outcome-driven.
+        </motion.p>
       </div>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-        {processSteps.map((step, index) => (
-          <motion.div
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6"
+      >
+        {processSteps.map((step, idx) => (
+          <motion.article
             key={step.id}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.15 }}
-            viewport={{ once: true }}
-            whileHover={{ translateY: -6 }}
-            className="text-center bg-white border border-[#C5A25A]/12 p-8 shadow-sm hover:shadow-md transition-all duration-300"
+            variants={item}
+            whileHover={{ y: -6, boxShadow: "0 10px 30px rgba(2,6,23,0.12)" }}
+            className="relative bg-white border border-[#F1F1F1] p-6 md:p-8 flex flex-col"
           >
-            <div className="flex justify-center mb-6">
+            <div className="flex items-start gap-4">
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.4 }}
-                className="w-16 h-16 flex items-center justify-center bg-[#C5A25A] text-white font-semibold text-2xl"
+                initial={{ scale: 0.9, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className={`w-14 h-14 flex items-center justify-center font-semibold text-white bg-gradient-to-br ${step.color} shrink-0`}
+                aria-hidden
               >
-                {step.id}
+                <span className="text-xl">{step.id}</span>
               </motion.div>
+
+              <div>
+                <h3 className="text-xl md:text-2xl font-semibold text-[#0b1526]">{step.title}</h3>
+                <p className="text-gray-600 mt-2">{step.desc}</p>
+              </div>
             </div>
-            <h3 className="text-xl font-semibold text-[#0b1526] mb-3">{step.title}</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
-          </motion.div>
+
+            <div className="mt-4 flex-1">
+             
+              <div className={`h-1 w-16 rounded-sm bg-gradient-to-r ${step.color} mt-auto`} />
+            </div>
+          </motion.article>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -30,11 +30,11 @@ const courts = [
 export default function Court() {
   return (
     <section
-      className="bg-[#f8f6f1] text-gray-900 py-24 px-6 md:px-16 font-sans"
+      className="bg-[#f8f6f1] text-gray-900 py-16 px-6 md:px-16 font-sans"
       style={{ fontFamily: "'Lora', serif" }}
     >
       <div className="max-w-7xl mx-auto">
-      
+
         <motion.div
           className="text-center mb-20"
           initial={{ opacity: 0, y: 50 }}
@@ -55,9 +55,11 @@ export default function Court() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           />
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-lg font-normal leading-relaxed">
-            A journey through the cornerstone courts that uphold justice and
-            safeguard the rights of every citizen.
+          <p className="text-gray-600 mt-4 max-w-3xl mx-auto text-lg font-normal leading-relaxed">
+            Explore the three levels of courts that form the backbone of India’s legal system. Each plays a unique role — from interpreting constitutional law to delivering justice at the district level.
+          </p>
+          <p className="text-gray-500 mt-3 max-w-3xl mx-auto text-md leading-relaxed">
+            Click &quot;Learn more&quot; on any card for a concise overview and resources to understand jurisdiction, notable functions, and how they might relate to your case.
           </p>
         </motion.div>
 
@@ -65,53 +67,50 @@ export default function Court() {
           {courts.map((court, index) => (
             <motion.div
               key={index}
-              className={`flex flex-col md:flex-row items-center gap-10 ${
-                court.reverse ? "md:flex-row-reverse" : ""
-              }`}
-              initial={{ opacity: 0, y: 100 }}
+              className={`flex flex-col md:flex-row items-center gap-8 md:gap-12 ${court.reverse ? "md:flex-row-reverse" : ""}`}
+              initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.7, ease: "easeOut", delay: index * 0.08 }}
               viewport={{ once: true }}
             >
-             
               <div className="md:w-1/2">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
-                  transition={{ type: "spring", stiffness: 150 }}
-                  className="overflow-hidden shadow-xl"
+                  transition={{ type: "spring", stiffness: 140 }}
+                  className="overflow-hidden rounded-sm border border-[#ECECEC]"
                 >
-                  <Image
-                    src={court.img}
-                    alt={court.name}
-                    width={600}
-                    height={400}
-                    className="object-cover w-full h-full"
-                  />
+                  <Image src={court.img} alt={court.name} width={800} height={520} className="object-cover w-full h-full" />
                 </motion.div>
               </div>
 
-            
               <div className="md:w-1/2 space-y-4">
                 <motion.h2
                   className="text-3xl md:text-4xl font-bold text-yellow-700"
                   style={{ fontFamily: "'Merriweather', serif" }}
-                  initial={{ x: -50, opacity: 0 }}
+                  initial={{ x: -30, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
                   viewport={{ once: true }}
                 >
                   {court.name}
                 </motion.h2>
+
                 <motion.p
                   className="text-gray-700 leading-relaxed text-lg"
                   style={{ fontFamily: "'Lora', serif" }}
-                  initial={{ x: 50, opacity: 0 }}
+                  initial={{ x: 30, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
                   viewport={{ once: true }}
                 >
                   {court.content}
                 </motion.p>
+
+                <div className="mt-4">
+                  <a href="#" className="inline-block px-6 py-2 bg-[#C5A25A] text-black font-medium rounded-sm hover:bg-[#b8964f] transition">
+                    Learn more
+                  </a>
+                </div>
               </div>
             </motion.div>
           ))}

@@ -44,6 +44,7 @@ const nav = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState(null);
 
   return (
     <motion.header
@@ -80,18 +81,21 @@ export default function Header() {
                 <button className="text-gray-800 hover:text-[#C5A25A] transition-colors font-medium">
                   {item.label}
                 </button>
-                <div className="absolute left-0 mt-2 w-[320px] bg-white border border-gray-200 shadow-xl rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 grid grid-cols-2">
-                  {item.submenu.map((sub, j) => (
-                    <a
-                      key={j}
-                      href={sub.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#C5A25A] transition-colors"
-                    >
-                      {sub.label}
-                    </a>
-                  ))}
+                <div className="absolute left-0 mt-2  w-[320px] lg:w-[400px] bg-white border border-gray-200 shadow-xl rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 grid grid-cols-2 lg:grid-cols-3 pointer-events-none group-hover:pointer-events-auto">
+                  {item.submenu
+                    .slice()
+                    .sort((a, b) => a.label.localeCompare(b.label))
+                    .map((sub, j) => (
+                      <a
+                        key={j}
+                        href={sub.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#C5A25A] transition-colors"
+                      >
+                        {sub.label}
+                      </a>
+                    ))}
                 </div>
               </div>
             ) : (
@@ -138,26 +142,47 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white border-t border-gray-200 shadow-inner"
+            // allow the mobile menu to scroll when content is large
+            className="md:hidden bg-white border-t border-gray-200 shadow-inner max-h-[calc(100vh-64px)] overflow-y-auto"
           >
             <ul className="flex flex-col py-4 px-6 space-y-2">
               {nav.map((item, i) =>
                 item.submenu ? (
                   <div key={i}>
-                    <p className="font-medium text-gray-800">{item.label}</p>
-                    <div className="ml-3 pl-3 border-l border-gray-200 space-y-1">
-                      {item.submenu.map((sub, j) => (
-                        <a
-                          key={j}
-                          href={sub.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block text-sm text-gray-700 hover:text-[#C5A25A] py-1"
-                        >
-                          {sub.label}
-                        </a>
-                      ))}
-                    </div>
+                    <button
+                      onClick={() => setOpenSubmenu(openSubmenu === i ? null : i)}
+                      className="w-full text-left flex items-center justify-between font-medium text-gray-800 py-2"
+                    >
+                      <span>{item.label}</span>
+                      <svg
+                        className={`h-5 w-5 text-gray-600 transform transition-transform ${openSubmenu === i ? 'rotate-180' : 'rotate-0'}`}
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+
+                    {openSubmenu === i && (
+                      <div className="ml-3 pl-3 border-l border-gray-200 space-y-1 py-2">
+                        {item.submenu
+                          .slice()
+                          .sort((a, b) => a.label.localeCompare(b.label))
+                          .map((sub, j) => (
+                            <a
+                              key={j}
+                              href={sub.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block text-sm text-gray-700 hover:text-[#C5A25A] py-1"
+                            >
+                              {sub.label}
+                            </a>
+                          ))}
+                      </div>
+                    )}
                   </div>
                 ) : (
                   <a

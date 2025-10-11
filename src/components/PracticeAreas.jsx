@@ -44,10 +44,10 @@ const areas = [
 
 const Areas = () => {
   return (
-    <section className="w-full bg-white text-[#0b1526] py-20 px-6">
+    <section className="w-full bg-white text-[#0b1526] py-10 px-6">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-[#C5A25A] mb-2">Practice Areas</h2>
-        <p className="text-gray-600">We focus on the legal areas most important to our clients</p>
+        <p className="text-gray-600 max-w-2xl mx-auto">We focus on the legal areas most important to our clients — practical advice, courtroom representation and transactional support.</p>
         <div className="w-20 h-1 bg-[#C5A25A] mx-auto mt-4"></div>
       </div>
 
@@ -57,21 +57,32 @@ const Areas = () => {
             key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.15 }}
+            transition={{ duration: 0.6, delay: index * 0.12 }}
             viewport={{ once: true }}
             whileHover={{ translateY: -6 }}
-            className="bg-white border border-[#C5A25A]/12 p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+            className="bg-white border border-[#F1EAD6] p-6 shadow-sm hover:shadow-lg transition-shadow duration-300 rounded-sm"
           >
-            <div className="flex justify-center mb-4 text-[#C5A25A]">{area.icon}</div>
-            <h3 className="text-2xl font-semibold text-[#0b1526] mb-4 text-center">{area.title}</h3>
-            <ul className="space-y-2 text-gray-600 text-sm">
-              {area.items.map((item, i) => (
-                <li key={i} className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[#C5A25A] inline-block"></span>
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-[#F5E7C9] to-[#F0DFA6] text-[#9a6f2b]">
+                {area.icon}
+              </div>
+              <h3 className="text-xl font-semibold text-[#0b1526]">{area.title}</h3>
+            </div>
+
+            <div className="mb-4 text-sm text-gray-600">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {area.items.map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="mt-1 w-2 h-2 bg-[#C5A25A] inline-block flex-shrink-0"></span>
+                    <span className="leading-snug">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mt-auto">
+              <a href="/contact" className="inline-block px-4 py-2 border border-[#C5A25A] text-[#C5A25A] hover:bg-[#C5A25A] hover:text-black transition">Request a Consultation</a>
+            </div>
           </motion.div>
         ))}
       </div>
