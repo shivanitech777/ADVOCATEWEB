@@ -10,7 +10,7 @@ export default function AboutPage({ show }) {
   return (
     <div className="min-h-screen bg-white text-black font-[Poppins] overflow-x-hidden">
       {show && (
-        <section className="py-5 bg-white text-center px-4 sm:px-6 relative overflow-hidden">
+        <section className="py-5 bg-white text-center px-4 sm:px-6 relative overflow-x-hidden">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}

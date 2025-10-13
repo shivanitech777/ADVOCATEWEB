@@ -30,7 +30,7 @@ const courts = [
 export default function Court() {
   return (
     <section
-      className="bg-[#f8f6f1] text-gray-900 py-16 px-6 md:px-16 font-sans"
+      className="bg-[#f8f6f1] text-gray-900 py-16 px-6 md:px-16 font-sans overflow-x-hidden"
       style={{ fontFamily: "'Lora', serif" }}
     >
       <div className="max-w-7xl mx-auto">
@@ -83,7 +83,7 @@ export default function Court() {
                 </motion.div>
               </div>
 
-              <div className="md:w-1/2 space-y-4">
+              <div className="md:w-1/2 space-y-4 ">
                 <motion.h2
                   className="text-3xl md:text-4xl font-bold text-yellow-700"
                   style={{ fontFamily: "'Merriweather', serif" }}

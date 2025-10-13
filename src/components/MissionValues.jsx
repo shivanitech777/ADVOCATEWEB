@@ -23,7 +23,7 @@ const MissionValues = () => {
   };
 
   return (
-    <section className="w-full bg-white text-[#0b1526] py-8 sm:py-10 px-6">
+    <section className="w-full bg-white text-[#0b1526] py-8 sm:py-10 px-6 overflow-x-hidden">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-start">
 
         <motion.div

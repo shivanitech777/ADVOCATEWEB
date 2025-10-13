@@ -19,7 +19,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#071428] text-gray-200 py-14">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 items-start">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 items-star overflow-x-hiddent">
 
 
         <motion.div

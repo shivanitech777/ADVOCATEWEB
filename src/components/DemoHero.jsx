@@ -53,7 +53,7 @@ const DemoHero = () => {
           {slides.map((slide, index) => (
             <CarouselItem key={index}>
               <section
-                className="relative lg:bg-gradient-to-b lg:from-[#0B1C2A] lg:via-[#0D2436] lg:to-[#102A3F] text-[#F5F5F5]"
+                className="relative lg:bg-gradient-to-b lg:from-[#0B1C2A] lg:via-[#0D2436] lg:to-[#102A3F] text-[#F5F5F5] overflow-x-hidden"
               >
       
                 <div

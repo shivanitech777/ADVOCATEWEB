@@ -44,7 +44,7 @@ const areas = [
 
 const Areas = () => {
   return (
-    <section className="w-full bg-white text-[#0b1526] py-10 px-6">
+    <section className="w-full bg-white text-[#0b1526] py-10 px-6 overflow-x-hidden">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-[#C5A25A] mb-2">Practice Areas</h2>
         <p className="text-gray-600 max-w-2xl mx-auto">We focus on the legal areas most important to our clients — practical advice, courtroom representation and transactional support.</p>
