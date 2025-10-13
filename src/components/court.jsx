@@ -8,21 +8,21 @@ const courts = [
     name: "Supreme Court of India",
     img: "/SUPREME.jpg",
     content:
-      "The Supreme Court of India stands as the highest judicial forum and final court of appeal, upholding the Constitution and protecting the fundamental rights of citizens. It delivers landmark judgments that shape the course of justice and democracy in India.",
+      "The Supreme Court of India stands as the highest judicial forum and final court of appeal, upholding the Constitution and protecting the fundamental rights of citizens.  It ensures justice, protects fundamental rights, and serves as the final court of appeal in all legal matters across the nation.It delivers landmark judgments that shape the course of justice and democracy in India.",
     reverse: false,
   },
   {
     name: "High Court",
     img: "/HIGH.jpg",
     content:
-      "High Courts operate at the state level, serving as the principal civil courts of original jurisdiction and appellate courts for subordinate courts. They play a vital role in maintaining judicial discipline and ensuring that justice reaches every citizen.",
+      "High Courts operate at the state level, serving as the principal civil courts of original jurisdiction and appellate courts for subordinate courts. They play a vital role in maintaining judicial discipline and ensuring that justice reaches every citizen.It ensures justice, protects fundamental rights, and serves as the final court of appeal in all legal matters across the nation.",
     reverse: true,
   },
   {
     name: "District Court",
-    img: "/delhi.jpg",
+    img: "/ui.jpg",
     content:
-      "District Courts are the foundation of India's judicial system, delivering justice at the grassroots level. They handle both civil and criminal cases, ensuring the rule of law is enforced across every district of the nation.",
+      "District Courts are the foundation of India's judicial system, delivering justice at the grassroots level. They handle both civil and criminal cases, ensuring the rule of law is enforced across every district of the nation.They handle both civil and criminal cases and ensure that justice is accessible to every citizen at the local level.",
     reverse: false,
   },
 ];

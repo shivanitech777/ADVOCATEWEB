@@ -9,8 +9,8 @@ const page = () => {
         heading="About Us"
         subtitle="Advocate — Legal Counsel"
         description="We are a dedicated legal practice focused on protecting rights and delivering practical solutions for individuals and businesses."
-        banner="/view.jpg"
-        mobileBanner="/zz.png"
+        banner="/ui.jpg"
+        mobileBanner="/blinndfolded.jpg"
       />
       <AboutPage />
     </div>
