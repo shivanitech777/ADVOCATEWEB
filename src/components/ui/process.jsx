@@ -39,7 +39,7 @@ const item = {
 const ProcessSection = () => {
   return (
     <section className="w-full bg-white text-[#0b1526] py-10 px-6  overflow-x-hidden">
-      <div className="max-w-6xl mx-auto text-center mb-10">
+      <div className="max-w-6xl mx-auto text-center mb-10 ">
         <motion.h2
           initial={{ opacity: 0, y: -12 }}
           whileInView={{ opacity: 1, y: 0 }}

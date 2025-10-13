@@ -30,7 +30,7 @@ const FAQAndConsultation = () => {
 
   return (
     <section className="w-full bg-white text-[#0b1526] py-16 px-6 md:px-16 overflow-x-hidden">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start overflow-x-hidden">
 
         <motion.div
           initial={{ opacity: 0, x: -40 }}
