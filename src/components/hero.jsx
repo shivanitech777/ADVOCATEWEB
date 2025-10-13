@@ -45,7 +45,7 @@ export default function Hero({ heading, subtitle, description, banner, mobileBan
   };
 
   return (
-    <div className="relative min-h-[65vh] flex items-center justify-center overflow-x-hidden">
+    <div className="relative min-h-[65vh] flex items-center justify-center">
 
       <div className="absolute inset-0 w-full h-full">
         <div className="absolute inset-0 bg-black/50 z-10" />

@@ -46,7 +46,7 @@ export default function Court() {
             className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-wide"
             style={{ fontFamily: "'Merriweather', serif" }}
           >
-            The Pillars of India’s Judiciary
+            The Pillars of India's Judiciary
           </h1>
           <motion.div
             className="mt-3 h-1 w-24 mx-auto bg-gradient-to-r from-yellow-600 to-yellow-400"
@@ -56,7 +56,7 @@ export default function Court() {
             viewport={{ once: true }}
           />
           <p className="text-gray-600 mt-4 max-w-3xl mx-auto text-lg font-normal leading-relaxed">
-            Explore the three levels of courts that form the backbone of India’s legal system. Each plays a unique role — from interpreting constitutional law to delivering justice at the district level.
+            Explore the three levels of courts that form the backbone of Indias legal system. Each plays a unique role — from interpreting constitutional law to delivering justice at the district level.
           </p>
           <p className="text-gray-500 mt-3 max-w-3xl mx-auto text-md leading-relaxed">
             Click &quot;Learn more&quot; on any card for a concise overview and resources to understand jurisdiction, notable functions, and how they might relate to your case.
