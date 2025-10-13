@@ -46,7 +46,7 @@ export default function Court() {
             className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-wide"
             style={{ fontFamily: "'Merriweather', serif" }}
           >
-            The Pillars of India's Judiciary
+            The Pillars of India&apos;s Judiciary
           </h1>
           <motion.div
             className="mt-3 h-1 w-24 mx-auto bg-gradient-to-r from-yellow-600 to-yellow-400"
