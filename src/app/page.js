@@ -11,9 +11,11 @@ export default function Home() {
     <>
       <DemoHero />
       <Count />
+      
       <AboutPage show={false} />
-      <Court/>
+       <Court/>
       <FAQAndConsultation />
+      
 
 
     </>

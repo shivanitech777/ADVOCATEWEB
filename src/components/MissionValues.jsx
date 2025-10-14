@@ -35,6 +35,9 @@ const MissionValues = () => {
         >
           <motion.div variants={item}>
             <h3 className="text-4xl font-semibold text-[#C5A25A]">Our Mission</h3>
+             <motion.div variants={item}>
+            <div className="h-[3px] w-17 bg-[#C5A25A]"></div>
+          </motion.div>
             <p className="text-gray-700 text-lg leading-relaxed">
               We deliver clear, ethical legal guidance to protect your rights and secure practical
               outcomes. Our mission is to make justice accessible, to act decisively when needed,
@@ -42,9 +45,7 @@ const MissionValues = () => {
             </p>
           </motion.div>
 
-          <motion.div variants={item}>
-            <div className="h-[2px] w-16 bg-[#C5A25A]"></div>
-          </motion.div>
+         
 
           <motion.div variants={item}>
             <p className="text-gray-600 leading-relaxed">
@@ -52,7 +53,7 @@ const MissionValues = () => {
               managing expectations, and building legal strategies that work.
             </p>
           </motion.div>
-
+{/* 
           <motion.div
             variants={item}
             className="mt-4 w-full overflow-hidden border border-[#EDEDED] bg-[#FAFAFA]"
@@ -71,7 +72,7 @@ const MissionValues = () => {
                 className="w-full h-44 sm:h-52 object-cover object-center"
               />
             </motion.div>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
 
         <motion.div

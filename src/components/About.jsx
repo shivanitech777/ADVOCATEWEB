@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import MissionValues from "./MissionValues";
-import TargetSection from "./Target";
+//  import MissionValues from "./MissionValues";
+// import TargetSection from "./Target";
 import Image from "next/image";
-import ProcessSection from "./ui/process";
+// import ProcessSection from "./ui/process";
 
 export default function AboutPage({ show }) {
   return (
-    <div className="min-h-screen bg-white text-black font-[Poppins] overflow-x-hidden">
+    <div className=" bg-white text-black font-[Poppins] overflow-x-hidden">
       {show && (
         <section className="py-5 bg-white text-center px-4 sm:px-6 relative overflow-x-hidden">
           <motion.div
@@ -71,12 +71,12 @@ export default function AboutPage({ show }) {
         </div>
       </section>
 
-      <MissionValues />
+      {/* <MissionValues />
       
-      <TargetSection />
+      <TargetSection /> */}
 
  
-      <section className="py-12 px-4 sm:px-6 bg-white">
+      {/* { <section className="py-12 px-4 sm:px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-xl sm:text-2xl font-[Playfair_Display] text-[#0b1526]">
             Our Legal Team
@@ -123,10 +123,10 @@ export default function AboutPage({ show }) {
             ))}
           </div>
         </div>
-      </section>
+      </section> } */}
 
-      <ProcessSection />
-
+   
+{/* 
       <section className="py-8 px-4 sm:px-6 bg-[#f9fafb]">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -161,7 +161,7 @@ export default function AboutPage({ show }) {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
