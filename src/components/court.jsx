@@ -103,9 +103,9 @@ export default function Court() {
           <p className="text-gray-600 mt-4 max-w-3xl mx-auto text-lg font-normal leading-relaxed">
             Explore the three levels of courts that form the backbone of Indias legal system. Each plays a unique role — from interpreting constitutional law to delivering justice at the district level.
           </p>
-          <p className="text-gray-500 mt-3 max-w-3xl mx-auto text-md leading-relaxed">
+          {/* <p className="text-gray-500 mt-3 max-w-3xl mx-auto text-md leading-relaxed">
             Click &quot;Learn more&quot; on any card for a concise overview and resources to understand jurisdiction, notable functions, and how they might relate to your case.
-          </p>
+          </p> */}
         </motion.div>
 
         <div className="space-y-24">
@@ -158,8 +158,10 @@ export default function Court() {
                   {court.model ? (
                     <Dialog>
                         <DialogTrigger 
-                        className= "inline-block px-6 py-3  text-yellow-600 font-medium rounded-md hover:text-yellow-500 transition-colors"
-                        >Click For Know More</DialogTrigger>
+                      className="px-6 py-2 bg-black text-white  hover:bg-gold-400 transition-all duration-300" >
+                  
+                    Learn more →
+                       </DialogTrigger>
                         <DialogContent>
                           <DialogHeader>
                             <DialogTitle>Menus</DialogTitle>
@@ -182,8 +184,8 @@ export default function Court() {
                     href={court.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block px-6 py-3  text-yellow-600 font-medium rounded-md hover:text-yellow-500 transition-colors"
-                  >
+                    className="px-6 py-2 bg-black text-white  hover:bg-gold-400 transition-all duration-300" >
+                  
                     Learn more →
                   </a>
                   )

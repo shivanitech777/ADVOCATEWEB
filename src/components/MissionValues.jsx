@@ -24,7 +24,7 @@ const MissionValues = () => {
 
   return (
     <section className="w-full bg-white text-[#0b1526] py-8 sm:py-10 px-6 overflow-x-hidden">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-start py-7">
 
         <motion.div
           initial="hidden"
@@ -36,9 +36,9 @@ const MissionValues = () => {
           <motion.div variants={item}>
             <h3 className="text-4xl font-semibold text-[#C5A25A]">Our Mission</h3>
              <motion.div variants={item}>
-            <div className="h-[3px] w-17 bg-[#C5A25A]"></div>
+            <div className="h-[3px] w-16 bg-[#C5A25A]"></div>
           </motion.div>
-            <p className="text-gray-700 text-lg leading-relaxed">
+            <p className="text-gray-700 text-lg leading-relaxed py-4">
               We deliver clear, ethical legal guidance to protect your rights and secure practical
               outcomes. Our mission is to make justice accessible, to act decisively when needed,
               and to support clients with integrity at every step.
@@ -84,6 +84,9 @@ const MissionValues = () => {
         >
           <motion.h3 variants={item} className="text-3xl font-semibold text-[#C5A25A] mb-6 text-center md:text-left">
             Core Values
+              <motion.div variants={item}>
+            <div className="h-[3px] w-16 bg-[#C5A25A]"></div>
+          </motion.div>
           </motion.h3>
 
           <motion.div variants={item} className="grid gap-5 divide-y divide-[#F1F1F1] md:divide-y-0">
