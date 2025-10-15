@@ -14,14 +14,12 @@ export default function Hero({ heading, subtitle, description, banner, mobileBan
   return (
     <div className="relative min-h-[65vh] flex items-center justify-center">
 
-      {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <div className="absolute inset-0 bg-black/50 z-10" />
         <Image src={mobileBanner} fill className='bg-contain md:hidden' alt="Banner" />
         <Image src={banner} fill className='hidden md:block bg-contain' alt="Banner" />
       </div>
 
-      {/* Hero Text */}
       <div className="relative z-30 text-center px-4 max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -68,7 +66,7 @@ export default function Hero({ heading, subtitle, description, banner, mobileBan
         </motion.div>
       </div>
 
-      {/* Scroll Down Button */}
+    
       <motion.button
         onClick={scrollToNext}
         className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white z-30"
