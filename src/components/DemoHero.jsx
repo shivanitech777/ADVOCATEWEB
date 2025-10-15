@@ -23,7 +23,7 @@ const slides = [
       "Providing strategic legal counsel and representation with integrity, precision, and a client-first approach. Every case handled with diligence and commitment to justice.",
     btn1: "Book a Consultation",
     btn2: "Our Practice Areas",
-    image: "/hii.jpg",
+    image: "/laww.jpg",
   },
   {
     title: "Defending Rights, Delivering Justice",

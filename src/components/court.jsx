@@ -75,13 +75,13 @@ export default function Court() {
   return (
     <>      
     <section
-      className="bg-[#f8f6f1] text-gray-900 py-16 px-6 md:px-16 font-sans overflow-x-hidden"
+      className="bg-[#f8f6f1] text-gray-900 py-16 px-16 md:px-16 font-sans overflow-x-hidden"
       style={{ fontFamily: "'Lora', serif" }}
     >
       <div className="max-w-7xl mx-auto">
 
         <motion.div
-          className="text-center mb-20"
+          className="text-center mb-14"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -108,7 +108,7 @@ export default function Court() {
           </p> */}
         </motion.div>
 
-        <div className="space-y-24">
+        <div className="space-y-20">
           {courts.map((court, index) => (
             <motion.div
               key={index}

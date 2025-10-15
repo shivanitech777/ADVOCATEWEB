@@ -12,7 +12,9 @@ const page = () => {
         banner="/ui.jpg"
         mobileBanner="/blinndfolded.jpg"
       />
-      <AboutPage />
+      <div className="py-12">
+        <AboutPage />
+      </div>
     </div>
   )
 }
