@@ -44,7 +44,7 @@ body {
       width: 100%;
     }
 
-/* small utilities for the royal theme */
+
 .btn-primary {
   @apply bg-primary text-white hover:bg-royal-600;
 }
@@ -107,6 +107,7 @@ body {
   --chart-5: 340 75% 55%;
  }
 }
+
 
 @layer base {
   * {

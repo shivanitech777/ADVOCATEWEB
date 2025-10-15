@@ -6,6 +6,8 @@ import FAQAndConsultation from "@/components/Factual";
 import Court from "@/components/court";
 
 
+
+
 export default function Home() {
   return (
     <>

@@ -99,7 +99,7 @@ export default function Header() {
                 </div>
               </div>
             ) : (
-              <a
+              <Link
                 key={i}
                 href={item.href}
                 target={item.href.startsWith("http") ? "_blank" : "_self"}
@@ -112,7 +112,7 @@ export default function Header() {
                   whileHover={{ scaleX: 1 }}
                   transition={{ duration: 0.3 }}
                 />
-              </a>
+              </Link>
             )
           )}
         </nav>
