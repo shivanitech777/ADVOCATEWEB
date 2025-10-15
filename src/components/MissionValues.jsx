@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Scale, Briefcase, BookOpen } from "lucide-react";
-import Image from "next/image";
+
 
 const MissionValues = () => {
   const container = {
