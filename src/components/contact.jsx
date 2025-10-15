@@ -37,19 +37,19 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black py-16 px-6">
+    <div className="min-h-screen bg-white text-black py-8 md:py-14 px-6">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10"
       >
-        
+
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="lg:col-span-2 bg-white border border-gray-200 shadow-lg rounded-2xl p-10"
+          className="lg:col-span-2 bg-white border border-gray-200 shadow-lg rounded p-6"
         >
           <h1 className="text-4xl font-bold text-[#0b1526] mb-3">Contact Us</h1>
           <p className="text-gray-600 mb-8">
@@ -58,7 +58,7 @@ export default function ContactPage() {
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-5">
-          
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -144,7 +144,7 @@ export default function ContactPage() {
               ></textarea>
             </motion.div>
 
-        
+
             <motion.button
               whileHover={{
                 scale: 1.05,
@@ -157,11 +157,11 @@ export default function ContactPage() {
               {status === "loading"
                 ? "Sending..."
                 : status === "success"
-                ? "Message Sent!"
-                : "Send Message"}
+                  ? "Message Sent!"
+                  : "Send Message"}
             </motion.button>
 
-       
+
             {status === "error" && (
               <p className="text-red-500 mt-2">
                 Please fill in all required fields.
@@ -174,7 +174,7 @@ export default function ContactPage() {
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="bg-white border border-gray-200 shadow-lg rounded-2xl p-8 flex flex-col justify-between"
+          className="bg-white border border-gray-200 shadow-lg rounded p-6 flex flex-col justify-between"
         >
           <div>
             <h3 className="text-2xl font-semibold text-[#0b1526] mb-4">
@@ -200,7 +200,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}

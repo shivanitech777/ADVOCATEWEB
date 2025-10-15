@@ -11,7 +11,7 @@ const Count = () => {
   ]
 
   return (
-    <div className="w-full bg-white text-[#0b1526] py-12">
+    <div className="w-full bg-white text-[#0b1526] py-8 md:py-10">
       <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center px-6 overflow-x-hidden">
         {stats.map((stat, i) => (
           <div key={i}>

@@ -12,7 +12,7 @@ export default function Hero({ heading, subtitle, description, banner, mobileBan
   };
 
   return (
-    <div className="relative min-h-[65vh] flex items-center justify-center">
+    <div className="relative min-h-[60vh] md:min-h-[65vh] flex items-center justify-center">
 
       <div className="absolute inset-0 w-full h-full">
         <div className="absolute inset-0 bg-black/50 z-10" />
@@ -27,9 +27,9 @@ export default function Hero({ heading, subtitle, description, banner, mobileBan
           transition={{ duration: 1 }}
           className="space-y-8"
         >
-          <motion.div 
-            initial={{ scale: 0.9, opacity: 0 }} 
-            animate={{ scale: 1, opacity: 1 }} 
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
@@ -49,14 +49,14 @@ export default function Hero({ heading, subtitle, description, banner, mobileBan
             )}
 
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <a 
-                href="/contact" 
+              <a
+                href="/contact"
                 className="inline-flex items-center px-6 py-3 bg-[#C5A25A] text-black font-semibold rounded-none hover:opacity-95"
               >
                 Book Consultation
               </a>
-              <a 
-                href="/service" 
+              <a
+                href="/service"
                 className="inline-flex items-center px-6 py-3 border border-[#C5A25A] text-[#C5A25A] font-medium rounded-none"
               >
                 Our Services
@@ -66,7 +66,7 @@ export default function Hero({ heading, subtitle, description, banner, mobileBan
         </motion.div>
       </div>
 
-    
+
       <motion.button
         onClick={scrollToNext}
         className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white z-30"

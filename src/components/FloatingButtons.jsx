@@ -3,25 +3,31 @@
 import { FiPhone } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
-export default function FloatingButtons() {
-  return (
-    <div className="fixed right-4 bottom-4 flex flex-col gap-4 z-50">
-     
-      <a
-        href="https://wa.me/YOUR_NUMBER"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform transform hover:scale-110"
-      >
-        <FaWhatsapp size={24} />
-      </a>
+export default function FloatingButtons({ phone = "+911234567890", whatsapp = "+911234567890" }) {
+  const waHref = `https://wa.me/${whatsapp}`;
+  const telHref = `tel:${phone}`;
 
-      <a
-        href="tel:+911234567890"
-        className="bg-blue-500 hover:bg-blue-600 text-white p-4 rounded-full shadow-lg transition-transform transform hover:scale-110"
-      >
-        <FiPhone size={24} />
-      </a>
+  return (
+    <div className="fixed inset-x-0 bottom-0 z-50 md:right-4 md:bottom-4 md:inset-x-auto">
+      <div className="flex md:flex-col w-full md:w-auto md:gap-4">
+        <a
+          href={waHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat on WhatsApp"
+          className="flex-1 md:flex-none flex items-center justify-center bg-green-500 hover:bg-green-600 text-white py-3 md:py-3 md:px-3 md:rounded-full shadow-lg transition-transform transform md:hover:scale-105"
+        >
+          <FaWhatsapp size={22} />
+        </a>
+
+        <a
+          href={telHref}
+          aria-label="Call us"
+          className="flex-1 md:flex-none flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white py-3 md:py-3 md:px-3 md:rounded-full shadow-lg transition-transform transform md:hover:scale-105"
+        >
+          <FiPhone size={22} />
+        </a>
+      </div>
     </div>
   );
 }

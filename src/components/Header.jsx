@@ -54,7 +54,7 @@ export default function Header() {
       className="w-full bg-[#faf9f6]/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-300 shadow-sm font-['Playfair_Display']"
     >
       <div className="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
-      
+
         <Link href="/" className="flex items-center space-x-3">
           <motion.div whileHover={{ scale: 1.05 }}>
             <Image
@@ -73,7 +73,7 @@ export default function Header() {
           </div>
         </Link>
 
-       
+
         <nav className="hidden md:flex items-center gap-6 text-[15px]">
           {nav.map((item, i) =>
             item.submenu ? (
@@ -117,7 +117,7 @@ export default function Header() {
           )}
         </nav>
 
-       
+
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden p-2 bg-gray-100 hover:bg-gray-200 rounded-md transition"
@@ -134,7 +134,7 @@ export default function Header() {
         </button>
       </div>
 
-   
+
       <AnimatePresence>
         {open && (
           <motion.div
@@ -142,7 +142,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.3 }}
-           
+
             className="md:hidden bg-white border-t border-gray-200 shadow-inner max-h-[calc(100vh-64px)] overflow-y-auto"
           >
             <ul className="flex flex-col py-4 px-6 space-y-2">
@@ -171,7 +171,7 @@ export default function Header() {
                           .slice()
                           .sort((a, b) => a.label.localeCompare(b.label))
                           .map((sub, j) => (
-                            <a
+                            <Link
                               key={j}
                               href={sub.href}
                               target="_blank"
@@ -179,21 +179,22 @@ export default function Header() {
                               className="block text-sm text-gray-700 hover:text-[#C5A25A] py-1"
                             >
                               {sub.label}
-                            </a>
+                            </Link>
                           ))}
                       </div>
                     )}
                   </div>
                 ) : (
-                  <a
+                  <Link
                     key={i}
                     href={item.href}
                     target={item.href.startsWith("http") ? "_blank" : "_self"}
                     rel="noopener noreferrer"
                     className="block text-gray-800 hover:text-[#C5A25A] transition-colors"
+                    onClick={() => setOpen(false)}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 )
               )}
             </ul>

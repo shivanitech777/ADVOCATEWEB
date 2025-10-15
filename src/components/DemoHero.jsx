@@ -11,6 +11,7 @@ import {
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { Playfair_Display, Lato } from "next/font/google"
+import Link from "next/link"
 
 const playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "700"] })
 const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] })
@@ -53,14 +54,13 @@ const DemoHero = () => {
           {slides.map((slide, index) => (
             <CarouselItem key={index}>
               <section
-               className="relative bg-gradient-to-t from-[#F9F7F3] via-[#E7D9B9] to-[#D2B48C] text-[#1F1F1F] overflow-x-hidden" >
-      
+                className="relative bg-gradient-to-t from-[#F9F7F3] via-[#E7D9B9] to-[#D2B48C] text-[#1F1F1F] overflow-x-hidden" >
+
                 <div
                   className="absolute inset-0 bg-cover bg-center lg:hidden z-0"
                   style={{ backgroundImage: `url(${slide.image})` }}
                 />
-         
-               {/* <div className="absolute inset-0 bg-gradient-to-b from-[#F9F3E5]/70 to-[#EAD7A4]/50 lg:from-transparent lg:to-transparent z-10"></div> */}
+
 
                 <div className="relative max-w-7xl mx-auto px-6 py-16 sm:py-24 flex flex-col-reverse lg:flex-row items-center gap-10 z-20">
 
@@ -70,7 +70,8 @@ const DemoHero = () => {
                     transition={{ duration: 0.8 }}
                     className="w-full lg:w-1/2 text-center lg:text-left px-2"  >
                     <p
-                      className={`${lato.className} text-[#f4cf87] md:bg-gradient-to-r md:from-[#865d03] md:via-[#9c6903] md:to-[#b97c04] md:text-transparent bg-clip-text leading-tigh uppercase tracking-wider text-sm mb-3`}
+                      className={`${lato.className} text-[#f4cf87] md:bg-gradient-to-r md:from-[#865d03] md:via-[#9c6903] md:to-[#b97c04] md:text-transparent bg-clip-text leading-tight uppercase tracking-wider text-sm mb-3`}
+                      aria-hidden={false}
                     >
                       {slide.subtitle}
                     </p>
@@ -88,18 +89,14 @@ const DemoHero = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-                      <a
+                      <Link
                         href="/contact"
-                        className={`${lato.className} inline-flex items-center justify-center px-6 sm:px-8 py-3 bg-[#C5A25A] text-[#0B1C2A] font-medium  shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition duration-200`}
+                        aria-label={`Contact - ${slide.btn1}`}
+                        className={`${lato.className} inline-flex items-center justify-center px-6 sm:px-8 py-3 bg-[#C5A25A] text-[#0B1C2A] font-medium shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition duration-200`}
                       >
                         {slide.btn1}
-                      </a>
-                      <a
-                        href="/service"
-                        className={`${lato.className} inline-flex items-center justify-center px-6 sm:px-8 py-3 border border-[#C5A25A] text-[#C5A25A] font-medium hover:bg-[#C5A25A] hover:text-[#0B1C2A] transition duration-200`}
-                      >
-                        {slide.btn2}
-                      </a>
+                      </Link>
+
                     </div>
                   </motion.div>
 
@@ -113,11 +110,12 @@ const DemoHero = () => {
                       whileHover={{ scale: 1.03 }}
                       className="relative w-full max-w-sm sm:max-w-md lg:max-w-[460px] h-[260px] sm:h-[380px] lg:h-[460px] overflow-hidden shadow-[0_12px_40px_rgba(2,6,23,0.45)]  "
                     >
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0B1C2A]/30 to-transparent z-10"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0B1C2A]/30 to-transparent z-10" aria-hidden />
                       <Image
                         src={slide.image}
                         alt={slide.title}
                         fill
+                        priority
                         className="object-cover"
                       />
                     </motion.div>

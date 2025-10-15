@@ -62,7 +62,7 @@ export default function LegalServicesSection() {
 
   return (
     <section className="bg-gradient-to-b from-white via-[#fdfbf7] to-[#f7f2e9] py-20 px-6">
-      {/* WHAT WE OFFER */}
+      
       <motion.div
         className="max-w-6xl mx-auto"
         initial="hidden"
@@ -79,7 +79,7 @@ export default function LegalServicesSection() {
           <div className="w-24 h-1 bg-gradient-to-r from-[#C5A25A] to-[#B89545] mx-auto mt-6 rounded-full" />
         </motion.div>
 
-        {/* SERVICE CARDS */}
+      
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((srv, idx) => (
             <motion.div
@@ -123,7 +123,7 @@ export default function LegalServicesSection() {
                 <div className="mt-6">
                   <a
                     href="/contact"
-                    className="block text-center w-full bg-[#B89545] text-white font-semibold py-2 rounded-md hover:bg-[#a28033] transition-all duration-300"
+                    className="block text-center w-full bg-[#B89545] text-white font-semibold py-2  hover:bg-[#a28033] transition-all duration-300"
                   >
                     Learn More →
                   </a>
@@ -133,7 +133,6 @@ export default function LegalServicesSection() {
           ))}
         </div>
 
-        {/* LEGAL PROCESS */}
         <motion.div variants={item} className="mt-20 text-center">
           <h2 className="text-3xl font-bold text-[#0b1526]">
             Our Legal Process
@@ -154,7 +153,7 @@ export default function LegalServicesSection() {
                 className="bg-white border border-[#E6DEC3] rounded-xl p-8 transition-all duration-500"
               >
                 <div className="flex flex-col items-center">
-                  <div className="bg-[#B89545] text-white text-2xl w-14 h-14 flex items-center justify-center rounded-md mb-4">
+                  <div className="bg-[#B89545] text-white text-2xl w-14 h-14 flex items-center justify-center mb-4">
                     {step.icon}
                   </div>
                   <span className="text-[#B89545] font-bold text-lg">

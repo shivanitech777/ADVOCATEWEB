@@ -23,8 +23,8 @@ const MissionValues = () => {
   };
 
   return (
-    <section className="w-full bg-white text-[#0b1526] py-8 sm:py-10 px-6 overflow-x-hidden">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-start py-7">
+    <section className="w-full bg-white text-[#0b1526] py-8 sm:py-10 px-6">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-start">
 
         <motion.div
           initial="hidden"
@@ -35,9 +35,9 @@ const MissionValues = () => {
         >
           <motion.div variants={item}>
             <h3 className="text-4xl font-semibold text-[#C5A25A]">Our Mission</h3>
-             <motion.div variants={item}>
-            <div className="h-[3px] w-16 bg-[#C5A25A]"></div>
-          </motion.div>
+            <motion.div variants={item}>
+              <div className="h-[3px] w-16 bg-[#C5A25A]"></div>
+            </motion.div>
             <p className="text-gray-700 text-lg leading-relaxed py-4">
               We deliver clear, ethical legal guidance to protect your rights and secure practical
               outcomes. Our mission is to make justice accessible, to act decisively when needed,
@@ -45,7 +45,7 @@ const MissionValues = () => {
             </p>
           </motion.div>
 
-         
+
 
           <motion.div variants={item}>
             <p className="text-gray-600 leading-relaxed">
@@ -53,26 +53,6 @@ const MissionValues = () => {
               managing expectations, and building legal strategies that work.
             </p>
           </motion.div>
-{/* 
-          <motion.div
-            variants={item}
-            className="mt-4 w-full overflow-hidden border border-[#EDEDED] bg-[#FAFAFA]"
-          >
-            <motion.div
-              initial={{ scale: 0.99, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <Image
-                src="/hn.jpg"
-                alt="Courthouse building"
-                width={1200}
-                height={600}
-                className="w-full h-44 sm:h-52 object-cover object-center"
-              />
-            </motion.div>
-          </motion.div> */}
         </motion.div>
 
         <motion.div
@@ -84,9 +64,9 @@ const MissionValues = () => {
         >
           <motion.h3 variants={item} className="text-3xl font-semibold text-[#C5A25A] mb-6 text-center md:text-left">
             Core Values
-              <motion.div variants={item}>
-            <div className="h-[3px] w-16 bg-[#C5A25A]"></div>
-          </motion.div>
+            <motion.div variants={item}>
+              <div className="h-[3px] w-16 bg-[#C5A25A]"></div>
+            </motion.div>
           </motion.h3>
 
           <motion.div variants={item} className="grid gap-5 divide-y divide-[#F1F1F1] md:divide-y-0">

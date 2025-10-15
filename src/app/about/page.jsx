@@ -2,7 +2,7 @@ import AboutPage from '@/components/About'
 import Hero from '@/components/hero'
 import React from 'react'
 
-const page = () => {
+const About = () => {
   return (
     <div className='min-h-screen'>
       <Hero
@@ -12,11 +12,11 @@ const page = () => {
         banner="/ui.jpg"
         mobileBanner="/blinndfolded.jpg"
       />
-      <div className="py-12">
+      <div className="py-8 md:py-10">
         <AboutPage />
       </div>
     </div>
   )
 }
 
-export default page
+export default About
