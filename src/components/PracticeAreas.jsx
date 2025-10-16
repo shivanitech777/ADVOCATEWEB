@@ -89,7 +89,7 @@ export default function LegalServicesSection() {
                 scale: 1.03,
                 boxShadow: "0 10px 25px rgba(197,162,90,0.25)",
               }}
-              className="bg-white rounded-xl overflow-hidden border border-[#F3EBD3] shadow-sm transition-all duration-500"
+              className="bg-white rounded overflow-hidden border border-[#F3EBD3] shadow-sm transition-all duration-500"
             >
               <div className="relative h-56 w-full">
                 <Image
@@ -150,7 +150,7 @@ export default function LegalServicesSection() {
                   y: -5,
                   boxShadow: "0 10px 20px rgba(197,162,90,0.25)",
                 }}
-                className="bg-white border border-[#E6DEC3] rounded-xl p-8 transition-all duration-500"
+                className="bg-white border border-[#E6DEC3] rounded p-8 transition-all duration-500"
               >
                 <div className="flex flex-col items-center">
                   <div className="bg-[#B89545] text-white text-2xl w-14 h-14 flex items-center justify-center mb-4">
