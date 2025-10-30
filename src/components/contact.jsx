@@ -8,7 +8,7 @@ export default function ContactPage() {
     name: "",
     email: "",
     phone: "",
-    service: "Business Law",
+
     message: "",
   });
   const [status, setStatus] = useState(null);
@@ -30,7 +30,7 @@ export default function ContactPage() {
         name: "",
         email: "",
         phone: "",
-        service: "Business Law",
+
         message: "",
       });
     }, 1000);
@@ -96,7 +96,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="grid md:grid-cols-2 gap-5"
+              className="grid md:grid-cols-1 gap-5"
             >
               <div>
                 <label className="block text-sm text-gray-700 mb-2">Phone</label>
@@ -108,22 +108,7 @@ export default function ContactPage() {
                   className="w-full bg-white border border-gray-300 focus:border-[#C5A25A] px-4 py-3 rounded-md outline-none transition-all"
                 />
               </div>
-              <div>
-                <label className="block text-sm text-gray-700 mb-2">
-                  Service
-                </label>
-                <select
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  className="w-full bg-white border border-gray-300 focus:border-[#C5A25A] px-4 py-3 rounded-md outline-none transition-all"
-                >
-                  <option>Business Law</option>
-                  <option>Family Law</option>
-                  <option>Criminal Law</option>
-                  <option>Civil Law</option>
-                </select>
-              </div>
+
             </motion.div>
 
             <motion.div

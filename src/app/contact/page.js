@@ -6,8 +6,8 @@ import React from 'react'
 const Service = () => {
   return (
     <div className=' min-h-screen'>
-        <Hero heading="Contact Us" banner="/zz.jpg" mobileBanner="/zz.jpg" />
-        <ContactPage/>
+      <Hero heading="Contact Us" banner="/zz.jpg" mobileBanner="/zz.jpg" show={false} />
+      <ContactPage />
     </div>
   )
 }

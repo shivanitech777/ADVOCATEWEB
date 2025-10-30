@@ -83,7 +83,7 @@ const FAQAndConsultation = () => {
           className="bg-white border border-[#C5A25A]/12 p-6 shadow-sm"
         >
           <p className="text-[#C5A25A] mb-2 font-[Playfair_Display]">Schedule For</p>
-          <h2 className="text-2xl md:text-3xl font-[Playfair_Display] mb-4">Free Consultation</h2>
+          <h2 className="text-2xl md:text-3xl font-[Playfair_Display] mb-4">Book Your Consultation</h2>
 
           <form
             className="space-y-4"

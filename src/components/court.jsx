@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 import MissionValues from "./MissionValues";
-import ProcessSection from "./ui/process";
 import {
   Dialog,
   DialogContent,
@@ -231,7 +230,6 @@ export default function Court() {
 
       <MissionValues />
       <TargetSection />
-      <ProcessSection />
     </>
 
 
