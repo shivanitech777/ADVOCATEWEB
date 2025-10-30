@@ -54,7 +54,7 @@ const DemoHero = () => {
           {slides.map((slide, index) => (
             <CarouselItem key={index}>
               <section
-                className="relative bg-gradient-to-t from-[#F9F7F3] via-[#E7D9B9] to-[#D2B48C] text-[#1F1F1F] overflow-x-hidden" >
+                className="relative bg-gradient-to-t from-[#F9F7F3] via-[#E7D9B9] to-[#D2B48C] text-[#1F1F1F] overflow-x-hidden min-h-screen" >
 
                 <div
                   className="absolute inset-0 bg-cover bg-center lg:hidden z-0"

@@ -1,176 +1,355 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Image from 'next/image';
 
-const container = {
-  hidden: { opacity: 0, y: 40 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { staggerChildren: 0.15, duration: 0.6, ease: "easeOut" },
+const practiceAreas = [
+  {
+    id: 'civil-and-commercial-litigation',
+    title: 'Civil & Commercial Litigation',
+    description: 'Our experienced litigation team handles complex civil and commercial disputes with strategic approach and in-depth knowledge of Indian legal system. We provide comprehensive representation in courts at all levels.',
+    image: '/ui.jpg',
+    services: [
+      'Property Disputes & Real Estate Litigation',
+      'Contract Disputes & Breach of Agreement',
+      'Commercial Litigation & Business Disputes',
+      'Tort Claims & Personal Injury Cases',
+      'Recovery Suits & Debt Collection',
+      'Injunction Matters & Interim Relief'
+    ],
+    keyPoints: [
+      'Experienced in High Court & Supreme Court matters',
+      'Strategic case management and timeline adherence',
+      'Strong negotiation and settlement capabilities',
+      'Comprehensive legal research and documentation'
+    ]
   },
-};
+  {
+    id: 'criminal-law',
+    title: 'Criminal Law',
+    description: 'We provide robust criminal defense services with extensive experience in defending complex criminal cases. Our team ensures thorough preparation and aggressive representation to protect your rights.',
+    image: '/zz.jpg',
+    services: [
+      'Criminal Defense & Representation',
+      'Bail Applications & Anticipatory Bail',
+      'White Collar Crimes Defense',
+      'Economic Offenses & Financial Crimes',
+      'PMLA Cases & Money Laundering Defense',
+      'Appeal Matters & Revision Petitions'
+    ],
+    keyPoints: [
+      'Expert knowledge of criminal procedure',
+      'Strong track record in bail applications',
+      'Specialized in economic offense cases',
+      'Thorough case preparation and evidence analysis'
+    ]
+  },
+  {
+    id: 'matrimonial-and-family-law-disputes',
+    title: 'Matrimonial & Family Law Disputes',
+    description: 'Our family law practice focuses on sensitive handling of matrimonial disputes with emphasis on amicable resolution while protecting our client\'s interests and family welfare.',
+    image: '/ui.jpg',
+    services: [
+      'Divorce Proceedings & Mutual Consent',
+      'Child Custody & Visitation Rights',
+      'Maintenance & Alimony Matters',
+      'Property Settlement & Division',
+      'Domestic Violence Cases',
+      'Adoption & Guardianship Proceedings'
+    ],
+    keyPoints: [
+      'Compassionate and confidential approach',
+      'Focus on child welfare and family interests',
+      'Expert in mediation and settlement',
+      'Quick resolution of matrimonial disputes'
+    ]
+  },
+  {
+    id: 'constitutional-law',
+    title: 'Constitutional Law',
+    description: 'We specialize in constitutional matters, fundamental rights protection, and public interest litigation with extensive experience in Supreme Court and High Court constitutional benches.',
+    image: '/zz.jpg',
+    services: [
+      'Writ Petitions (Habeas Corpus, Mandamus, Certiorari)',
+      'Public Interest Litigation (PIL)',
+      'Fundamental Rights Cases',
+      'Constitutional Interpretation Matters',
+      'Judicial Review of Government Actions',
+      'Administrative Law & Service Matters'
+    ],
+    keyPoints: [
+      'Supreme Court constitutional law expertise',
+      'Strong understanding of fundamental rights',
+      'Experience in public interest matters',
+      'Strategic approach to constitutional challenges'
+    ]
+  },
+  {
+    id: 'money-laundering---cyber-crime',
+    title: 'Money Laundering / Cyber Crime',
+    description: 'Specialized practice in financial crimes, cyber security law, and digital forensics with deep understanding of modern technological challenges and regulatory compliance.',
+    image: '/ui.jpg',
+    services: [
+      'PMLA Defense & Money Laundering Cases',
+      'Cyber Crime Investigation & Defense',
+      'Digital Forensics & Electronic Evidence',
+      'Data Protection & Privacy Law',
+      'IT Act Violations & Cyber Security',
+      'Financial Crime Compliance & Advisory'
+    ],
+    keyPoints: [
+      'Technical expertise in digital evidence',
+      'Understanding of financial crime regulations',
+      'Experience with ED and cyber crime cells',
+      'Modern approach to technological legal issues'
+    ]
+  },
+  {
+    id: 'mediation',
+    title: 'Mediation',
+    description: 'Professional mediation services focusing on amicable dispute resolution outside traditional litigation, saving time and costs while preserving relationships between parties.',
+    image: '/zz.jpg',
+    services: [
+      'Commercial Mediation & Business Disputes',
+      'Family Mediation & Matrimonial Matters',
+      'Property Disputes Mediation',
+      'Contract Disputes Settlement',
+      'Workplace Conflicts Resolution',
+      'Community Disputes Mediation'
+    ],
+    keyPoints: [
+      'Cost-effective alternative to litigation',
+      'Faster resolution compared to court proceedings',
+      'Confidential and private process',
+      'Helps preserve business and personal relationships'
+    ]
+  },
+  {
+    id: 'arbitration',
+    title: 'Arbitration',
+    description: 'Expert arbitration services providing efficient alternative dispute resolution with specialized knowledge in domestic and international arbitration procedures and enforcement.',
+    image: '/ui.jpg',
+    services: [
+      'Commercial Arbitration & Trade Disputes',
+      'International Arbitration Matters',
+      'Construction & Infrastructure Disputes',
+      'Investment Disputes & Joint Ventures',
+      'Ad-hoc Arbitration Proceedings',
+      'Institutional Arbitration (ICC, LCIA, SIAC)'
+    ],
+    keyPoints: [
+      'Faster resolution than traditional litigation',
+      'Expert arbitrators and specialized panels',
+      'Flexible procedures tailored to dispute',
+      'Enforceable awards with international recognition'
+    ]
+  }
+];
 
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-};
-
-export default function LegalServicesSection() {
-  const services = [
-    {
-      title: "Civil Law",
-      desc: "Comprehensive civil legal services including property disputes, money recovery, and contract matters.",
-      img: "/oooo.jpg", 
-      points: ["Partition Suit", "Money Recovery", "Real Estate"],
-    },
-    {
-      title: "Family Law",
-      desc: "Compassionate guidance through family legal matters with a focus on protecting your family's best interests.",
-      img: "/oh.jpg",
-      points: ["Mutual Divorce", "Maintenance", "Child Custody"],
-    },
-    {
-      title: "Criminal Law",
-      desc: "Expert defense in criminal cases with a focus on protecting your rights and ensuring fair treatment under the law.",
-      img: "/ysz.jpg",
-      points: ["Sexual Offence", "Fraud", "Bail"],
-    },
-  ];
-
-  const processSteps = [
-    {
-      number: "01",
-      title: "Understanding",
-      desc: "We believe in devoting sufficient time, listening to our clients while understanding their issues.",
-      icon: "💬",
-    },
-    {
-      number: "02",
-      title: "Strategic Planning",
-      desc: "Our team formulates a strategy to aggressively defend and contest your stance.",
-      icon: "📋",
-    },
-    {
-      number: "03",
-      title: "Implementing The Steps",
-      desc: "We believe in a wholesome execution of the plan in order to draw in fruitful results.",
-      icon: "⚡",
-    },
-  ];
-
+export default function PracticeAreas() {
   return (
-    <section className="bg-gradient-to-b from-white via-[#fdfbf7] to-[#f7f2e9] py-20 px-6">
-      
-      <motion.div
-        className="max-w-6xl mx-auto"
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={container}
-      >
-        <motion.div variants={item} className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-[#0b1526]">What We Offer</h2>
-          <p className="text-gray-700 mt-3 max-w-2xl mx-auto leading-relaxed">
-            Comprehensive, timely and strategic legal services tailored to your
-            needs across civil, family and criminal law.
-          </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#C5A25A] to-[#B89545] mx-auto mt-6 rounded-full" />
-        </motion.div>
-
-      
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((srv, idx) => (
+    <div className="min-h-screen bg-[#f8f6f1]">
+      {/* Header Section */}
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-black">Practice Areas</h1>
             <motion.div
-              key={idx}
-              variants={item}
-              whileHover={{
-                scale: 1.03,
-                boxShadow: "0 10px 25px rgba(197,162,90,0.25)",
-              }}
-              className="bg-white rounded overflow-hidden border border-[#F3EBD3] shadow-sm transition-all duration-500"
+              className="h-1 w-24 mx-auto bg-white mb-6"
+              initial={{ width: 0 }}
+              animate={{ width: 96 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            />
+            <p className="text-xl md:text-2xl text-yellow-600 max-w-3xl mx-auto">
+              Comprehensive legal services across multiple practice areas with expert representation and personalized solutions
+            </p>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Practice Areas Grid */}
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="space-y-16">
+          {practiceAreas.map((area, index) => (
+            <motion.div
+              key={area.id}
+              id={area.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className={`flex flex-col lg:flex-row items-center gap-12 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                }`}
             >
-              <div className="relative h-56 w-full">
-                <Image
-                  src={srv.img}
-                  alt={srv.title}
-                  fill
-                  className="object-cover"
-                />
+              {/* Image Section */}
+              <div className="lg:w-1/2">
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="overflow-hidden rounded-lg shadow-lg"
+                >
+                  <Image
+                    src={area.image}
+                    alt={area.title}
+                    width={600}
+                    height={400}
+                    className="w-full h-[300px] md:h-[400px] object-cover"
+                  />
+                </motion.div>
               </div>
 
-              <div className="p-6 text-left">
-                <h3 className="text-xl font-semibold text-[#0b1526] mb-2">
-                  {srv.title}
-                </h3>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  {srv.desc}
-                </p>
+              {/* Content Section */}
+              <div className="lg:w-1/2 space-y-6">
+                <motion.h2
+                  className="text-3xl md:text-4xl font-bold text-[#C5A25A]"
+                  initial={{ x: index % 2 === 1 ? 30 : -30, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                >
+                  {area.title}
+                </motion.h2>
 
-                <h4 className="font-semibold text-[#0b1526] mb-2">
-                  Our Services
-                </h4>
-                <ul className="space-y-1 text-gray-700 text-sm">
-                  {srv.points.map((p, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <span className="text-[#C5A25A] font-bold">✓</span>
-                      {p}
-                    </li>
-                  ))}
-                </ul>
+                <motion.p
+                  className="text-gray-700 text-lg leading-relaxed"
+                  initial={{ x: index % 2 === 1 ? -30 : 30, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  {area.description}
+                </motion.p>
 
-                <div className="mt-6">
-                  <a
+                {/* Services Section */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-lg p-6 shadow-md"
+                >
+                  <h4 className="text-xl font-semibold text-gray-800 mb-4">Our Services Include:</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {area.services.map((service, idx) => (
+                      <div key={idx} className="flex items-start text-gray-600">
+                        <svg className="w-5 h-5 text-[#C5A25A] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-sm">{service}</span>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+
+                {/* Key Points Section */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="bg-gradient-to-r from-[#C5A25A]/10 to-yellow-100 rounded-lg p-6"
+                >
+                  <h4 className="text-xl font-semibold text-gray-800 mb-4">Why Choose Us:</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {area.keyPoints.map((point, idx) => (
+                      <div key={idx} className="flex items-start text-gray-700">
+                        <svg className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-sm font-medium">{point}</span>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+
+                {/* CTA Buttons */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+                  viewport={{ once: true }}
+                  className="flex flex-col sm:flex-row gap-4 pt-4"
+                >
+                  <Link
                     href="/contact"
-                    className="block text-center w-full bg-[#B89545] text-white font-semibold py-2  hover:bg-[#a28033] transition-all duration-300"
+                    className="flex-1 bg-[#C5A25A] hover:bg-[#B8944E] text-white px-6 py-3 rounded-lg text-center font-semibold transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg"
                   >
-                    Learn More →
-                  </a>
-                </div>
+                    Get Legal Consultation
+                  </Link>
+                  <Link
+                    href="tel:+919711168100"
+                    className="flex-1 border-2 border-[#C5A25A] text-[#C5A25A] hover:bg-[#C5A25A] hover:text-white px-6 py-3 rounded-lg text-center font-semibold transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg"
+                  >
+                    Call: +91 97111 68100
+                  </Link>
+                </motion.div>
               </div>
             </motion.div>
           ))}
         </div>
+      </div>
 
-        <motion.div variants={item} className="mt-20 text-center">
-          <h2 className="text-3xl font-bold text-[#0b1526]">
-            Our Legal Process
-          </h2>
-          <p className="text-gray-600 mt-2">
-            Our steps to achieve success for every client.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-            {processSteps.map((step, idx) => (
-              <motion.div
-                key={idx}
-                variants={item}
-                whileHover={{
-                  y: -5,
-                  boxShadow: "0 10px 20px rgba(197,162,90,0.25)",
-                }}
-                className="bg-white border border-[#E6DEC3] rounded p-8 transition-all duration-500"
+      {/* Contact CTA Section */}
+      <div className="bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Discuss Your Legal Matter?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Our experienced legal team is ready to provide you with comprehensive solutions tailored to your specific needs.
+              Contact us today for a detailed consultation and let us help you navigate your legal challenges.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-[#C5A25A] hover:bg-[#B8944E] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg"
               >
-                <div className="flex flex-col items-center">
-                  <div className="bg-[#B89545] text-white text-2xl w-14 h-14 flex items-center justify-center mb-4">
-                    {step.icon}
-                  </div>
-                  <span className="text-[#B89545] font-bold text-lg">
-                    {step.number}
-                  </span>
-                  <h4 className="text-xl font-semibold text-[#0b1526] mt-1">
-                    {step.title}
-                  </h4>
-                  <p className="text-gray-600 text-sm mt-3 leading-relaxed">
-                    {step.desc}
-                  </p>
+                Schedule Consultation
+              </Link>
+              <Link
+                href="mailto:advocateriteshforyou@gmail.com"
+                className="border-2 border-[#C5A25A] text-[#C5A25A] hover:bg-[#C5A25A] hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg"
+              >
+                Email: advocateriteshforyou@gmail.com
+              </Link>
+            </div>
+
+            {/* Office Address */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="mt-12 text-center"
+            >
+              <h3 className="text-xl font-semibold mb-4 text-[#C5A25A]">Visit Our Office</h3>
+              <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-gray-300">
+                <div>
+                  <h4 className="font-semibold text-white mb-2">Chamber Address:</h4>
+                  <p className="text-sm">S-12, Jail Road, Opposite Lotus Hospital, Dwarka Sector-2, New Delhi-110075</p>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </motion.div>
-    </section>
+                <div>
+                  <h4 className="font-semibold text-white mb-2">Office Address:</h4>
+                  <p className="text-sm">F-5, Ground Floor, Sector-7, Dwarka, New Delhi-110075</p>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+    </div>
   );
 }

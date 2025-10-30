@@ -9,8 +9,8 @@ const OurExpertise = () => {
                 heading="Our Expertise"
                 subtitle="Advocate — Legal Counsel"
                 description="We specialize in diverse legal domains, offering expert counsel and representation to safeguard your rights and interests."
-                banner="/ui.jpg"
-                mobileBanner="/blinndfolded.jpg"
+                banner="/img2.jpg"
+                mobileBanner="/img2.jpg"
             />
             <Expertise />
         </div>

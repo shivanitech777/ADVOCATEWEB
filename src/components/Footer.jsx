@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaFacebookF, FaTwitter, FaPinterestP, FaLinkedinIn } from "react-icons/fa";
-import { FiPhone, FiMail, FiClock, FiGlobe } from "react-icons/fi";
+import { FiPhone, FiMail } from "react-icons/fi";
 
 export default function Footer() {
 
@@ -59,14 +59,31 @@ export default function Footer() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <h3 className="text-lg font-semibold text-white mb-4 border-l-2 border-[#C5A25A] pl-3">
-            Contact
+            Contact Information
           </h3>
-          <p className="text-sm mb-3 text-gray-300">Office & Appointments</p>
-          <ul className="space-y-3 text-sm">
-            <li className="flex items-center gap-3 text-gray-200"><FiGlobe className="opacity-80" /> New Delhi, India</li>
-            <li className="flex items-center gap-3 text-gray-200"><FiPhone className="opacity-80" /> <a href="tel:+919876543210" className="hover:text-white">+91 98765 43210</a></li>
-            <li className="flex items-center gap-3 text-gray-200"><FiMail className="opacity-80" /> <a href="mailto:info@indianlawmasters.com" className="hover:text-white">info@indianlawmasters.com</a></li>
-            <li className="flex items-center gap-3 text-gray-200"><FiClock className="opacity-80" /> Mon - Sat: 09:00 - 18:00</li>
+
+          {/* Chamber Address */}
+          <div className="mb-4">
+            <p className="text-sm font-medium text-[#C5A25A] mb-2">Chamber Address</p>
+            <p className="text-xs text-gray-300 mb-2">Ch No. - 856, Dwarka District Court, Sector-10, Dwarka, New Delhi - 110075</p>
+          </div>
+
+          {/* Office Address */}
+          <div className="mb-4">
+            <p className="text-sm font-medium text-[#C5A25A] mb-2">Office Address</p>
+            <p className="text-xs text-gray-300 mb-2">Shop No. 2,3&4, Second Floor, Plot No.20, Manish Royal Plaza-II, MLU, Sector-10, Dwarka, New Delhi - 110075</p>
+          </div>
+
+          <ul className="space-y-2 text-sm">
+            <li className="flex items-center gap-3 text-gray-200">
+              <FiPhone className="opacity-80" />
+              <a href="tel:+919871722270" className="hover:text-white">+91 98717 22270</a>
+            </li>
+            <li className="flex items-center gap-3 text-gray-200">
+              <FiMail className="opacity-80" />
+              <a href="mailto:Indianlawmasters@gmail.com" className="hover:text-white">Indianlawmasters@gmail.com</a>
+            </li>
+
           </ul>
         </motion.div>
 

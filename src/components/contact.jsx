@@ -162,26 +162,42 @@ export default function ContactPage() {
           className="bg-white border border-gray-200 shadow-lg rounded p-6 flex flex-col justify-between"
         >
           <div>
-            <h3 className="text-2xl font-semibold text-[#0b1526] mb-4">
-              Office & Contact
+            <h3 className="text-2xl font-semibold text-[#0b1526] mb-6">
+              Contact Information
             </h3>
 
-            <div className="space-y-4 text-gray-700">
-              <p className="flex items-center gap-2">
-                <MapPin className="text-[#C5A25A]" size={18} />
-                Chamber No. 12, Civil Court Complex, New Delhi, India
-              </p>
-              <p className="flex items-center gap-2">
-                <Phone className="text-[#C5A25A]" size={18} /> +91 98765 43210
-              </p>
-              <p className="flex items-center gap-2">
-                <Mail className="text-[#C5A25A]" size={18} /> info@advocatefirm.com
-              </p>
+            {/* Chamber Address */}
+            <div className="mb-6">
+              <h4 className="text-lg font-semibold text-[#C5A25A] mb-3">Chamber Address</h4>
+              <div className="space-y-3 text-gray-700">
+                <p className="flex items-start gap-2">
+                  <MapPin className="text-[#C5A25A] mt-1 flex-shrink-0" size={18} />
+                  <span>Ch No. - 856, Dwarka District Court, Sector-10, Dwarka, New Delhi - 110075</span>
+                </p>
+                <p className="flex items-center gap-2">
+                  <Phone className="text-[#C5A25A]" size={18} /> +91 98717 22270
+                </p>
+                <p className="flex items-center gap-2">
+                  <Mail className="text-[#C5A25A]" size={18} /> Indianlawmasters@gmail.com
+                </p>
+              </div>
             </div>
 
-            <div className="mt-6">
-              <p className="text-sm text-gray-500">Hours</p>
-              <p className="text-gray-800">Mon – Sat: 09:00 – 18:00</p>
+            {/* Office Address */}
+            <div className="mb-6">
+              <h4 className="text-lg font-semibold text-[#C5A25A] mb-3">Office Address</h4>
+              <div className="space-y-3 text-gray-700">
+                <p className="flex items-start gap-2">
+                  <MapPin className="text-[#C5A25A] mt-1 flex-shrink-0" size={18} />
+                  <span>Shop No. 2,3&4, Second Floor, Plot No.20, Manish Royal Plaza-II, MLU, Sector-10, Dwarka, New Delhi - 110075</span>
+                </p>
+                <p className="flex items-center gap-2">
+                  <Phone className="text-[#C5A25A]" size={18} /> +91 98717 22270
+                </p>
+                <p className="flex items-center gap-2">
+                  <Mail className="text-[#C5A25A]" size={18} /> Indianlawmasters@gmail.com
+                </p>
+              </div>
             </div>
           </div>
 
@@ -193,8 +209,8 @@ export default function ContactPage() {
             className="mt-6 overflow-hidden rounded-md shadow-sm border border-gray-200"
           >
             <iframe
-              title="Office Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.697944933575!2d77.21803737529074!3d28.61054017567075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd7a1e63e6a5%3A0x88a0ec1ad62c0481!2sCivil%20Court%20Complex!5e0!3m2!1sen!2sin!4v1696768929842!5m2!1sen!2sin"
+              title="Chamber Location - Dwarka District Court"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.8366327!2d77.0452!3d28.58889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b85b8f7e837%3A0xd5c5d5b5e8f7e837!2sDwarka%20District%20Court%2C%20Sector%2010%2C%20Dwarka%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1696768929842!5m2!1sen!2sin"
               width="100%"
               height="200"
               style={{ border: 0 }}

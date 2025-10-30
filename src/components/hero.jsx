@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 
-export default function Hero({ heading, subtitle, description, banner, mobileBanner, show = true }) {
+export default function Hero({ heading, subtitle, description, banner, mobileBanner }) {
 
   const scrollToNext = () => {
     const aboutSection = document.getElementById('about');
@@ -16,8 +16,8 @@ export default function Hero({ heading, subtitle, description, banner, mobileBan
 
       <div className="absolute inset-0 w-full h-full">
         <div className="absolute inset-0 bg-black/50 z-10" />
-        <Image src={mobileBanner} fill className='bg-contain md:hidden' alt="Banner" />
-        <Image src={banner} fill className='hidden md:block bg-contain' alt="Banner" />
+        <Image src={mobileBanner} fill className='object-cover object-top md:hidden' alt="Banner" />
+        <Image src={banner} fill className='hidden md:block object-cover object-top' alt="Banner" />
       </div>
 
       <div className="relative z-30 text-center px-4 max-w-6xl mx-auto">
@@ -55,12 +55,7 @@ export default function Hero({ heading, subtitle, description, banner, mobileBan
               >
                 Book Consultation
               </a>
-              {show && <a
-                href="/service"
-                className="inline-flex items-center px-6 py-3 border border-[#C5A25A] text-[#C5A25A] font-medium rounded-none"
-              >
-                Our Services
-              </a>}
+
             </div>
           </motion.div>
         </motion.div>

@@ -15,7 +15,7 @@ const expertiseAreas = [
             "Criminal Law",
             "Matrimonial & Family Law Disputes",
             "Constitutional Law",
-            "Money Laundering / Corporate Crime"
+            "Money Laundering / Cyber Crime"
         ],
         reverse: false
     },
