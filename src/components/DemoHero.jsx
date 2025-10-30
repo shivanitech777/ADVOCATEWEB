@@ -62,13 +62,13 @@ const DemoHero = () => {
                 />
 
 
-                <div className="relative max-w-7xl mx-auto px-6 py-16 sm:py-24 flex flex-col-reverse lg:flex-row items-center gap-10 z-20">
+                <div className="relative max-w-7xl mx-auto px-6 py-16 sm:py-24 flex flex-col-reverse lg:flex-row items-center justify-center gap-10 z-20 min-h-screen">
 
                   <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="w-full lg:w-1/2 text-center lg:text-left px-2"  >
+                    className="w-full lg:w-1/2 text-center lg:text-left px-2 flex flex-col justify-center items-center lg:items-start"  >
                     <p
                       className={`${lato.className} text-[#f4cf87] md:bg-gradient-to-r md:from-[#865d03] md:via-[#9c6903] md:to-[#b97c04] md:text-transparent bg-clip-text leading-tight uppercase tracking-wider text-sm mb-3`}
                       aria-hidden={false}
