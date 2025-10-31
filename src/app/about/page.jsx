@@ -9,7 +9,7 @@ const About = () => {
         heading="About Us"
         subtitle="Advocate — Legal Counsel"
         description="We are a dedicated legal practice focused on protecting rights and delivering practical solutions for individuals and businesses."
-        banner="/ui.jpg"
+        banner="/img5.jpg"
         mobileBanner="/blinndfolded.jpg"
       />
       <div className="py-8 md:py-10">

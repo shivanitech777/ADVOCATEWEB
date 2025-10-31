@@ -105,10 +105,12 @@ export default function Header() {
             />
           </motion.div>
           <div>
-            <h1 className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-900 leading-tight">
+            <h1 className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-900 leading-tight uppercase">
               Indian Law Masters
             </h1>
-            <p className="text-xs md:text-sm text-gray-600 italic">Legal Counsel & Advisor</p>
+            <p className="text-xs md:text-sm text-gray-600 italic">
+              Advocates & Legal Consultants
+            </p>
           </div>
         </Link>
 

@@ -30,8 +30,10 @@ export default function Footer() {
           <div className="flex items-start gap-4 mb-4">
             <Image src={"/logo2.jpg"} alt="Indian Law Masters logo" width={70} height={70} />
             <div>
-              <h2 className="text-2xl font-bold text-white">Indian Law Masters</h2>
-              <p className="text-sm text-[#C5A25A] tracking-wide">Legal Counsel & Advisors</p>
+              <h2 className="text-2xl font-bold text-white uppercase">Indian Law Masters</h2>
+              <p className="text-sm text-[#C5A25A] tracking-wide">
+                Advocates & Legal Consultants
+              </p>
             </div>
           </div>
 
