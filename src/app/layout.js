@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import DisclaimerDialog from "@/components/DisclaimerDialog";
 
 
 
@@ -33,11 +34,8 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
-         <FloatingButtons />
-
-    
-    
-       
+        <FloatingButtons />
+        <DisclaimerDialog />
       </body>
     </html>
   );
