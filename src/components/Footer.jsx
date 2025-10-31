@@ -95,8 +95,6 @@ export default function Footer() {
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           <h3 className="text-lg font-semibold text-white mb-3 border-l-2 border-[#C5A25A] pl-3">Stay Connected</h3>
-          <p className="text-sm text-gray-300 mb-3">Subscribe to our newsletter for legal updates and firm news.</p>
-
 
           <div className="flex gap-3 mt-5">
             {[
