@@ -8,26 +8,17 @@ export default function DisclaimerDialog() {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
-        // Check if user has already accepted disclaimer
-        const hasAccepted = localStorage.getItem('disclaimerAccepted');
-        if (!hasAccepted) {
-            // Show dialog after a short delay
-            const timer = setTimeout(() => {
-                setIsOpen(true);
-            }, 1000);
-            return () => clearTimeout(timer);
-        }
+        // Show dialog after a short delay
+        const timer = setTimeout(() => {
+            setIsOpen(true);
+        }, 1000);
+        return () => clearTimeout(timer);
     }, []);
 
     const handleAccept = () => {
-        localStorage.setItem('disclaimerAccepted', 'true');
         setIsOpen(false);
     };
 
-    const handleClose = () => {
-        // Redirect away from site if they don't accept
-        window.location.href = 'https://www.google.com';
-    };
 
     return (
         <AnimatePresence>
@@ -57,13 +48,7 @@ export default function DisclaimerDialog() {
                                         <p className="text-sm text-gray-300">Indian Law Masters</p>
                                     </div>
                                 </div>
-                                <button
-                                    onClick={handleClose}
-                                    className="p-2 hover:bg-white/10 rounded-full transition-colors"
-                                    aria-label="Close and leave website"
-                                >
-                                    <X className="w-5 h-5" />
-                                </button>
+
                             </div>
                         </div>
 
@@ -72,38 +57,38 @@ export default function DisclaimerDialog() {
                             <div className="space-y-4 text-gray-700 leading-relaxed">
                                 <h3 className="text-lg font-bold text-gray-800 mb-4">DISCLAIMER</h3>
 
-                                <p className="text-sm leading-relaxed">
+                                <p className="text-sm leading-relaxed mb-3">
                                     The Bar Council of India prohibits advocates from engaging in any form of advertisement or solicitation. By accessing the Indian Law Masters website (our website), the user acknowledges that:
                                 </p>
 
-                                <div className="space-y-4 text-sm leading-relaxed">
-                                    <p>
+                                <ul className="space-y-3 text-sm leading-relaxed list-disc pl-6">
+                                    <li>
                                         The user is voluntarily using our website to gain information about us for their information and use. They also acknowledge that there has been no attempt by us to advertise or solicit work.
-                                    </p>
+                                    </li>
 
-                                    <p>
+                                    <li>
                                         Any information obtained or downloaded from our website does not lead to the creation of an attorney-client relationship between the Firm and the user.
-                                    </p>
+                                    </li>
 
-                                    <p>
+                                    <li>
                                         The content on this website is for informational purposes only and cannot be construed to be a form of legal opinion or legal advice.
-                                    </p>
+                                    </li>
 
-                                    <p>
+                                    <li>
                                         Indian Law Masters will not be held liable for any consequences from actions taken based on the materials or information provided on this website.
-                                    </p>
-                                </div>
+                                    </li>
+                                </ul>
 
                                 <div className="bg-amber-50 p-4 rounded-lg border border-amber-200 mt-6">
                                     <p className="text-sm text-amber-800 font-medium">
                                         The Bar Council of India prohibits advocates from engaging in any form of advertisement or solicitation. By accessing the Indian Law Masters website (our website), the user acknowledges that:
                                     </p>
-                                    <div className="mt-3 space-y-2 text-xs text-amber-700">
-                                        <p>• The user is voluntarily using our website to gain information about us for their information and use. They also acknowledge that there has been no attempt by us to advertise or solicit work.</p>
-                                        <p>• Any information obtained or downloaded from our website does not lead to the creation of an attorney-client relationship between the Firm and the user.</p>
-                                        <p>• The content on this website is for informational purposes only and cannot be construed to be a form of legal opinion or legal advice.</p>
-                                        <p>• Indian Law Masters will not be held liable for any consequences from actions taken based on the materials or information provided on this website.</p>
-                                    </div>
+                                    <ul className="mt-3 space-y-2 text-xs text-amber-700 list-disc pl-5">
+                                        <li>The user is voluntarily using our website to gain information about us for their information and use. They also acknowledge that there has been no attempt by us to advertise or solicit work.</li>
+                                        <li>Any information obtained or downloaded from our website does not lead to the creation of an attorney-client relationship between the Firm and the user.</li>
+                                        <li>The content on this website is for informational purposes only and cannot be construed to be a form of legal opinion or legal advice.</li>
+                                        <li>Indian Law Masters will not be held liable for any consequences from actions taken based on the materials or information provided on this website.</li>
+                                    </ul>
                                 </div>
 
                                 <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mt-6">
@@ -117,12 +102,7 @@ export default function DisclaimerDialog() {
                         {/* Footer */}
                         <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
                             <div className="flex flex-col sm:flex-row gap-3 justify-end">
-                                {/* <button
-                                    onClick={handleClose}
-                                    className="px-6 py-2.5 text-gray-600 hover:text-gray-800 font-medium transition-colors order-2 sm:order-1"
-                                >
-                                    Decline & Leave
-                                </button> */}
+
                                 <button
                                     onClick={handleAccept}
                                     className="px-6 py-2.5 bg-gradient-to-r from-[#C5A25A] to-[#B8956B] text-white font-semibold rounded-lg hover:from-[#B8956B] hover:to-[#C5A25A] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 order-1 sm:order-2"
