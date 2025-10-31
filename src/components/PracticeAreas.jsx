@@ -105,46 +105,7 @@ const practiceAreas = [
       'Modern approach to technological legal issues'
     ]
   },
-  {
-    id: 'mediation',
-    title: 'Mediation',
-    description: 'Professional mediation services focusing on amicable dispute resolution outside traditional litigation, saving time and costs while preserving relationships between parties.',
-    image: '/zz.jpg',
-    services: [
-      'Commercial Mediation & Business Disputes',
-      'Family Mediation & Matrimonial Matters',
-      'Property Disputes Mediation',
-      'Contract Disputes Settlement',
-      'Workplace Conflicts Resolution',
-      'Community Disputes Mediation'
-    ],
-    keyPoints: [
-      'Cost-effective alternative to litigation',
-      'Faster resolution compared to court proceedings',
-      'Confidential and private process',
-      'Helps preserve business and personal relationships'
-    ]
-  },
-  {
-    id: 'arbitration',
-    title: 'Arbitration',
-    description: 'Expert arbitration services providing efficient alternative dispute resolution with specialized knowledge in domestic and international arbitration procedures and enforcement.',
-    image: '/ui.jpg',
-    services: [
-      'Commercial Arbitration & Trade Disputes',
-      'International Arbitration Matters',
-      'Construction & Infrastructure Disputes',
-      'Investment Disputes & Joint Ventures',
-      'Ad-hoc Arbitration Proceedings',
-      'Institutional Arbitration (ICC, LCIA, SIAC)'
-    ],
-    keyPoints: [
-      'Faster resolution than traditional litigation',
-      'Expert arbitrators and specialized panels',
-      'Flexible procedures tailored to dispute',
-      'Enforceable awards with international recognition'
-    ]
-  }
+
 ];
 
 export default function PracticeAreas() {
