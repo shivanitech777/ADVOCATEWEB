@@ -9,7 +9,7 @@ const practiceAreas = [
     id: 'civil-and-commercial-litigation',
     title: 'Civil & Commercial Litigation',
     description: 'Our experienced litigation team handles complex civil and commercial disputes with strategic approach and in-depth knowledge of Indian legal system. We provide comprehensive representation in courts at all levels.',
-    image: '/ui.jpg',
+    image: '/img1.jpg',
     services: [
       'Property Disputes & Real Estate Litigation',
       'Contract Disputes & Breach of Agreement',
@@ -29,7 +29,7 @@ const practiceAreas = [
     id: 'criminal-law',
     title: 'Criminal Law',
     description: 'We provide robust criminal defense services with extensive experience in defending complex criminal cases. Our team ensures thorough preparation and aggressive representation to protect your rights.',
-    image: '/zz.jpg',
+    image: '/img2.jpg',
     services: [
       'Criminal Defense & Representation',
       'Bail Applications & Anticipatory Bail',
@@ -49,7 +49,7 @@ const practiceAreas = [
     id: 'matrimonial-and-family-law-disputes',
     title: 'Matrimonial & Family Law Disputes',
     description: 'Our family law practice focuses on sensitive handling of matrimonial disputes with emphasis on amicable resolution while protecting our client\'s interests and family welfare.',
-    image: '/ui.jpg',
+    image: '/img3.jpg',
     services: [
       'Divorce Proceedings & Mutual Consent',
       'Child Custody & Visitation Rights',
@@ -69,7 +69,7 @@ const practiceAreas = [
     id: 'constitutional-law',
     title: 'Constitutional Law',
     description: 'We specialize in constitutional matters, fundamental rights protection, and public interest litigation with extensive experience in Supreme Court and High Court constitutional benches.',
-    image: '/zz.jpg',
+    image: '/img4.jpg',
     services: [
       'Writ Petitions (Habeas Corpus, Mandamus, Certiorari)',
       'Public Interest Litigation (PIL)',
@@ -104,7 +104,26 @@ const practiceAreas = [
       'Experience with ED and cyber crime cells',
       'Modern approach to technological legal issues'
     ]
-  },
+  }, {
+    id: "alternate-dispute-resolution",
+    title: "Alternate Dispute Resolution",
+    description: "We offer comprehensive services in alternative dispute resolution (ADR) methods, including mediation and arbitration, to help clients resolve conflicts efficiently and amicably.",
+    image: "/hii.jpg",
+    services: [
+      'Mediation & Conciliation',
+      'Arbitration Proceedings',
+      'Negotiation Strategies',
+      'Dispute Resolution Consulting',
+      'Family Mediation',
+      'Commercial Mediation'
+    ],
+    keyPoints: [
+      'Expertise in various ADR mechanisms',
+      'Focus on amicable and cost-effective solutions',
+      'Strong negotiation and communication skills',
+      'Experience in cross-border disputes'
+    ]
+  }
 
 ];
 
