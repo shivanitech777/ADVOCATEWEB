@@ -18,15 +18,15 @@ body {
     text-wrap: balance;
   }
 }
-@font-face {
+/* @font-face {
   font-family: 'SerifKhandaaan';
   src: url('/fonts/serifkhandaaan.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 body {
-  font-family: 'SerifKhandaaan', sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
 .font-serif {
