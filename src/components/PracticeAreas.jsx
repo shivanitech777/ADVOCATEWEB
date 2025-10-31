@@ -214,7 +214,7 @@ export default function PracticeAreas() {
                   viewport={{ once: true }}
                   className="bg-white rounded-lg p-6 shadow-md"
                 >
-                  <h4 className="text-xl font-semibold text-gray-800 mb-4">Our Services Include:</h4>
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {area.services.map((service, idx) => (
                       <div key={idx} className="flex items-start text-gray-600">
@@ -227,53 +227,17 @@ export default function PracticeAreas() {
                   </div>
                 </motion.div>
 
-                {/* Key Points Section */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-r from-[#C5A25A]/10 to-yellow-100 rounded-lg p-6"
-                >
-                  <h4 className="text-xl font-semibold text-gray-800 mb-4">Why Choose Us:</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {area.keyPoints.map((point, idx) => (
-                      <div key={idx} className="flex items-start text-gray-700">
-                        <svg className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        <span className="text-sm font-medium">{point}</span>
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
 
-                {/* CTA Buttons */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-                  viewport={{ once: true }}
-                  className="flex flex-col sm:flex-row gap-4 pt-4"
-                >
-                  <Link
-                    href="/contact"
-                    className="flex-1 bg-[#C5A25A] hover:bg-[#B8944E] text-white px-6 py-3 rounded-lg text-center font-semibold transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg"
-                  >
-                    Get Legal Consultation
-                  </Link>
-                  <Link
-                    href="tel:+919711168100"
-                    className="flex-1 border-2 border-[#C5A25A] text-[#C5A25A] hover:bg-[#C5A25A] hover:text-white px-6 py-3 rounded-lg text-center font-semibold transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg"
-                  >
-                    Call: +91 97111 68100
-                  </Link>
-                </motion.div>
+
+
               </div>
             </motion.div>
           ))}
         </div>
       </div>
+
+
+
 
       {/* Contact CTA Section */}
       <div className="bg-gray-900 text-white">
