@@ -16,7 +16,7 @@ const nav = [
           { href: "https://bombayhighcourt.nic.in/", label: "Bombay High Court" },
           { href: "https://www.calcuttahighcourt.gov.in/", label: "Calcutta High Court" },
           { href: "https://highcourt.cg.gov.in/", label: "Chhattisgarh High Court" },
-          { href: "https://ecourts.gov.in/ecourts_home/index.php", label: "Delhi High Court" },
+          { href: "https://www.delhihighcourt.nic.in/web ", label: "Delhi High Court" },
           { href: "https://ghconline.gov.in/", label: "Gauhati High Court" },
           { href: "https://gujarathighcourt.nic.in/", label: "Gujarat High Court" },
           { href: "https://highcourt.hp.gov.in/", label: "Himachal Pradesh High Court" },
@@ -145,7 +145,11 @@ export default function Header() {
                             <div className="grid grid-cols-2 gap-2 max-h-80 overflow-y-auto">
                               {sub.submenu
                                 .slice()
-                                .sort((a, b) => a.label.localeCompare(b.label))
+                                .sort((a, b) => {
+                                  if (a.label === "Delhi High Court") return -1;
+                                  if (b.label === "Delhi High Court") return 1;
+                                  return a.label.localeCompare(b.label);
+                                })
                                 .map((subsub, k) => (
                                   <a
                                     key={k}
@@ -281,7 +285,11 @@ export default function Header() {
                                     >
                                       {sub.submenu
                                         .slice()
-                                        .sort((a, b) => a.label.localeCompare(b.label))
+                                        .sort((a, b) => {
+                                          if (a.label === "Delhi High Court") return -1;
+                                          if (b.label === "Delhi High Court") return 1;
+                                          return a.label.localeCompare(b.label);
+                                        })
                                         .map((subsub, k) => (
                                           <a
                                             key={k}
@@ -308,7 +316,7 @@ export default function Header() {
                                 href={sub.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="block text-sm md:text-base font-medium text-gray-700 hover:text-[#C5A25A] py-2 px-3 rounded hover:bg-gray-50 transition-colors"
+                                className="block text-gray-800 hover:text-[#C5A25A] transition-colors py-3 px-3 rounded hover:bg-gray-50 text-base md:text-lg font-semibold"
                                 onClick={() => {
                                   setOpen(false);
                                   setOpenSubmenu(null);
