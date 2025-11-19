@@ -17,7 +17,7 @@ const Count = () => {
             <CountUp
               from={0}
               to={stat.to}
-              separator=","
+
               direction="up"
               duration={2}
               className="text-4xl md:text-5xl font-bold text-[#C5A25A]"

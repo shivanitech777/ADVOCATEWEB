@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -55,6 +56,9 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+
   useEffect(() => {
     const controlNavbar = () => {
       if (typeof window !== 'undefined') {
@@ -90,7 +94,12 @@ export default function Header() {
         opacity: isVisible ? 1 : 0
       }}
       transition={{ type: "spring", stiffness: 120, damping: 15 }}
-      className={`w-full ${isScrolled ? 'bg-[#faf9f6]/95 backdrop-blur-md border-b border-gray-300 shadow-sm' : 'bg-[#faf9f6]/95 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none border-b border-gray-300 lg:border-b-0'} sticky md:fixed top-0 z-50 font-['Playfair_Display'] transition-all duration-300`}
+      className={`w-full ${isScrolled
+          ? 'bg-[#faf9f6]/95 backdrop-blur-md border-b border-gray-300 shadow-sm'
+          : isHomePage
+            ? 'bg-[#faf9f6]/95 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none border-b border-gray-300 lg:border-b-0'
+            : 'bg-[#faf9f6]/95 backdrop-blur-md border-b border-gray-300'
+        } sticky md:fixed top-0 z-50 font-['Playfair_Display'] transition-all duration-300`}
     >
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
 

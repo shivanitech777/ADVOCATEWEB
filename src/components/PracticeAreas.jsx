@@ -264,33 +264,13 @@ export default function PracticeAreas() {
                 Schedule Consultation
               </Link>
               <Link
-                href="mailto:advocateriteshforyou@gmail.com"
+                href="mailto:Indianlawmasters@gmail.com"
                 className="border-2 border-[#C5A25A] text-[#C5A25A] hover:bg-[#C5A25A] hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg"
               >
-                Email: advocateriteshforyou@gmail.com
+                Email: Indianlawmasters@gmail.com
               </Link>
             </div>
 
-            {/* Office Address */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="mt-12 text-center"
-            >
-              <h3 className="text-xl font-semibold mb-4 text-[#C5A25A]">Visit Our Office</h3>
-              <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-gray-300">
-                <div>
-                  <h4 className="font-semibold text-white mb-2">Chamber Address:</h4>
-                  <p className="text-sm">S-12, Jail Road, Opposite Lotus Hospital, Dwarka Sector-2, New Delhi-110075</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white mb-2">Office Address:</h4>
-                  <p className="text-sm">F-5, Ground Floor, Sector-7, Dwarka, New Delhi-110075</p>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>

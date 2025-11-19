@@ -3,7 +3,7 @@
 import { FiPhone } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
-export default function FloatingButtons({ phone = "+911234567890", whatsapp = "+911234567890" }) {
+export default function FloatingButtons({ phone = "+919871722270", whatsapp = "+919871722270" }) {
   const waHref = `https://wa.me/${whatsapp}`;
   const telHref = `tel:${phone}`;
 

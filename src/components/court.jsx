@@ -29,7 +29,7 @@ const courts = [
   },
   {
     name: "High Court",
-    img: "/HIGH.jpg",
+    img: "/delhihighcourt.jpg",
     content:
       "High Courts operate at the state level as the principal civil courts of original jurisdiction and appellate courts for subordinate courts. They maintain judicial discipline and provide important appellate oversight across the state.",
     highlights: [
