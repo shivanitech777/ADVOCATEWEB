@@ -32,7 +32,7 @@ export default function Hero({ heading, subtitle, description, banner, mobileBan
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mt-14">
               {heading}
             </h1>
 
