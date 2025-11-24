@@ -50,7 +50,7 @@ const BareAct = () => {
         { name: "THE INDIAN MEDICINE CENTRAL COUNCIL ACT 1970", pdf: "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/Indian%20Law%20Masters/bare-act/THE%20INDIAN%20MEDICINE%20CENTRAL%20COUNCIL%20ACT%201970.pdf" },
         { name: "THE INDIAN PARTNERSHIP ACT 1932", pdf: "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/Indian%20Law%20Masters/bare-act/THE%20INDIAN%20PARTNERSHIP%20ACT%201932.pdf" },
         { name: "THE INDIAN PENAL CODE, 1860", pdf: "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/Indian%20Law%20Masters/bare-act/THE%20INDIAN%20PENAL%20CODE%2C%201860.pdf" },
-        { name: "THE INDIAN STAMP ACT 1899", pdf: "#" },
+        { name: "THE INDIAN STAMP ACT 1899 (PDF Coming Soon)", pdf: "#" },
         { name: "THE INDIAN SUCCESSION ACT 1925", pdf: "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/Indian%20Law%20Masters/bare-act/THE%20INDIAN%20SUCCESSION%20ACT%201925.pdf" },
         { name: "THE INDIAN TELEGRAPH ACT 1885", pdf: "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/Indian%20Law%20Masters/bare-act/THE%20INDIAN%20TELEGRAPH%20ACT%201885.pdf" },
         { name: "THE INDUSTRIAL DISPUTES ACT 1947", pdf: "https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/Indian%20Law%20Masters/bare-act/THE%20INDUSTRIAL%20DISPUTES%20ACT%201947.pdf" },
