@@ -188,15 +188,25 @@ export default function Header() {
                         </div>
                       </div>
                     ) : (
-                      <a
-                        key={j}
-                        href={sub.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-[#C5A25A] transition-colors border-b border-gray-100 last:border-b-0"
-                      >
-                        {sub.label}
-                      </a>
+                      sub.href?.startsWith("http") ? (
+                        <a
+                          key={j}
+                          href={sub.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-[#C5A25A] transition-colors border-b border-gray-100 last:border-b-0"
+                        >
+                          {sub.label}
+                        </a>
+                      ) : (
+                        <Link
+                          key={j}
+                          href={sub.href}
+                          className="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-[#C5A25A] transition-colors border-b border-gray-100 last:border-b-0"
+                        >
+                          {sub.label}
+                        </Link>
+                      )
                     )
                   ))}
                 </div>
@@ -334,19 +344,33 @@ export default function Header() {
                                 </AnimatePresence>
                               </div>
                             ) : (
-                              <a
-                                key={j}
-                                href={sub.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block text-gray-800 hover:text-[#C5A25A] transition-colors py-3 px-3 rounded hover:bg-gray-50 text-base md:text-lg font-semibold"
-                                onClick={() => {
-                                  setOpen(false);
-                                  setOpenSubmenu(null);
-                                }}
-                              >
-                                {sub.label}
-                              </a>
+                              sub.href?.startsWith("http") ? (
+                                <a
+                                  key={j}
+                                  href={sub.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="block text-gray-800 hover:text-[#C5A25A] transition-colors py-3 px-3 rounded hover:bg-gray-50 text-base md:text-lg font-semibold"
+                                  onClick={() => {
+                                    setOpen(false);
+                                    setOpenSubmenu(null);
+                                  }}
+                                >
+                                  {sub.label}
+                                </a>
+                              ) : (
+                                <Link
+                                  key={j}
+                                  href={sub.href}
+                                  className="block text-gray-800 hover:text-[#C5A25A] transition-colors py-3 px-3 rounded hover:bg-gray-50 text-base md:text-lg font-semibold"
+                                  onClick={() => {
+                                    setOpen(false);
+                                    setOpenSubmenu(null);
+                                  }}
+                                >
+                                  {sub.label}
+                                </Link>
+                              )
                             )
                           ))}
                         </motion.div>
