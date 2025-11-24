@@ -8,6 +8,7 @@ import Image from "next/image";
 const nav = [
   { href: "/about", label: "About Us" },
   { href: "/our-expertise", label: "Our Expertise" },
+
   {
     submenu: [
       { href: "https://www.sci.gov.in", label: "Supreme Court" },
@@ -45,7 +46,18 @@ const nav = [
     label: "Courts",
   },
   { href: "/practice-areas", label: "Practice Areas" },
+  {
+    href: "https://judgments.ecourts.gov.in/pdfsearch/index.php", label: "Judgment Search"
+  },
   { href: "/contact", label: "Contact Us" },
+  {
+    submenu: [
+      { href: "/new-criminal-law", label: "New Criminal Law" },
+      { href: "/bare-act", label: "Bare Act" },
+      { href: "/court-calendar", label: "Court Calendar" }
+    ],
+    label: "More",
+  }
 ];
 
 export default function Header() {
@@ -95,10 +107,10 @@ export default function Header() {
       }}
       transition={{ type: "spring", stiffness: 120, damping: 15 }}
       className={`w-full ${isScrolled
-          ? 'bg-[#faf9f6]/95 backdrop-blur-md border-b border-gray-300 shadow-sm'
-          : isHomePage
-            ? 'bg-[#faf9f6]/95 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none border-b border-gray-300 lg:border-b-0'
-            : 'bg-[#faf9f6]/95 backdrop-blur-md border-b border-gray-300'
+        ? 'bg-[#faf9f6]/95 backdrop-blur-md border-b border-gray-300 shadow-sm'
+        : isHomePage
+          ? 'bg-[#faf9f6]/95 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none border-b border-gray-300 lg:border-b-0'
+          : 'bg-[#faf9f6]/95 backdrop-blur-md border-b border-gray-300'
         } sticky md:fixed top-0 z-50 font-['Playfair_Display'] transition-all duration-300`}
     >
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
@@ -124,7 +136,7 @@ export default function Header() {
         </Link>
 
 
-        <nav className="hidden lg:flex items-center gap-8 text-[17px]">
+        <nav className="hidden lg:flex items-center gap-6 text-[17px]">
           {nav.map((item, i) =>
             item.submenu ? (
               <div key={i} className="relative group">
@@ -190,20 +202,22 @@ export default function Header() {
                 </div>
               </div>
             ) : (
-              <Link
-                key={i}
-                href={item.href}
-                target={item.href.startsWith("http") ? "_blank" : "_self"}
-                rel="noopener noreferrer"
-                className="relative text-gray-800 hover:text-[#C5A25A] transition-colors duration-300 font-semibold text-lg"
-              >
-                {item.label}
-                <motion.div
-                  className="absolute left-0 bottom-0 h-[2px] bg-[#C5A25A] w-full origin-left scale-x-0"
-                  whileHover={{ scaleX: 1 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </Link>
+              item.href && (
+                <Link
+                  key={i}
+                  href={item.href}
+                  target={item.href?.startsWith("http") ? "_blank" : "_self"}
+                  rel="noopener noreferrer"
+                  className="relative text-gray-800 hover:text-[#C5A25A] transition-colors duration-300 font-semibold text-lg"
+                >
+                  {item.label}
+                  <motion.div
+                    className="absolute left-0 bottom-0 h-[2px] bg-[#C5A25A] w-full origin-left scale-x-0"
+                    whileHover={{ scaleX: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </Link>
+              )
             )
           )}
         </nav>
@@ -340,16 +354,18 @@ export default function Header() {
                     </AnimatePresence>
                   </div>
                 ) : (
-                  <Link
-                    key={i}
-                    href={item.href}
-                    target={item.href.startsWith("http") ? "_blank" : "_self"}
-                    rel="noopener noreferrer"
-                    className="block text-gray-800 hover:text-[#C5A25A] transition-colors py-3 px-3 rounded hover:bg-gray-50 text-base md:text-lg font-semibold"
-                    onClick={() => setOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
+                  item.href && (
+                    <Link
+                      key={i}
+                      href={item.href}
+                      target={item.href?.startsWith("http") ? "_blank" : "_self"}
+                      rel="noopener noreferrer"
+                      className="block text-gray-800 hover:text-[#C5A25A] transition-colors py-3 px-3 rounded hover:bg-gray-50 text-base md:text-lg font-semibold"
+                      onClick={() => setOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  )
                 )
               )}
             </ul>

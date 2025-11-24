@@ -79,17 +79,7 @@ export default function DisclaimerDialog() {
                                     </li>
                                 </ul>
 
-                                <div className="bg-amber-50 p-4 rounded-lg border border-amber-200 mt-6">
-                                    <p className="text-sm text-amber-800 font-medium">
-                                        The Bar Council of India prohibits advocates from engaging in any form of advertisement or solicitation. By accessing the Indian Law Masters website (our website), the user acknowledges that:
-                                    </p>
-                                    <ul className="mt-3 space-y-2 text-xs text-amber-700 list-disc pl-5">
-                                        <li>The user is voluntarily using our website to gain information about us for their information and use. They also acknowledge that there has been no attempt by us to advertise or solicit work.</li>
-                                        <li>Any information obtained or downloaded from our website does not lead to the creation of an attorney-client relationship between the Firm and the user.</li>
-                                        <li>The content on this website is for informational purposes only and cannot be construed to be a form of legal opinion or legal advice.</li>
-                                        <li>Indian Law Masters will not be held liable for any consequences from actions taken based on the materials or information provided on this website.</li>
-                                    </ul>
-                                </div>
+                          
 
                                 <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mt-6">
                                     <p className="text-xs text-gray-600">
