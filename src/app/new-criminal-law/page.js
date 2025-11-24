@@ -63,7 +63,7 @@ const NewCriminalLaw = () => {
                         The New Criminal Justice System
                     </h2>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                        India's criminal justice system has been modernized with three comprehensive laws,
+                        India&apos;s criminal justice system has been modernized with three comprehensive laws,
                         replacing British-era legislation with contemporary legal frameworks
                     </p>
                 </motion.div>
@@ -136,7 +136,7 @@ const NewCriminalLaw = () => {
                             A New Era in Criminal Justice
                         </h3>
                         <p className="text-gray-700 leading-relaxed max-w-4xl mx-auto">
-                            These three landmark legislations represent a significant shift in India's approach to criminal justice,
+                            These three landmark legislations represent a significant shift in India&apos;s approach to criminal justice,
                             incorporating modern legal principles while addressing contemporary challenges. Click on any law above to
                             explore detailed information, key provisions, and their impact on the legal landscape.
                         </p>
