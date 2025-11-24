@@ -16,7 +16,7 @@ export default function AboutPage({ show }) {
             <h1 id="about-heading" className="text-4xl sm:text-5xl md:text-6xl font-serif mb-6 tracking-wide text-[#C5A25A]">
               About Our Chambers
             </h1>
-            <p className="max-w-2xl mx-auto text-base sm:text-lg   md:text-xl text-gray-700 font-light">
+            <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-700 font-light">
               Dedicated to upholding justice, integrity, and unwavering advocacy for our clients.
             </p>
           </motion.div>
@@ -26,6 +26,8 @@ export default function AboutPage({ show }) {
 
       <section aria-labelledby="about-heading" className="py-8 px-4 sm:px-6 bg-white text-black">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+
+          {/* Image Section */}
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -43,6 +45,7 @@ export default function AboutPage({ show }) {
             </div>
           </motion.div>
 
+          {/* Founder Content Section */}
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -51,12 +54,27 @@ export default function AboutPage({ show }) {
             <h3 className="text-3xl sm:text-4xl text-[#0b1526] mb-3">
               Meet Our Founder
             </h3>
+
             <p className="mb-4 text-base sm:text-lg leading-relaxed text-black">
-              With over <span className="font-semibold text-[#C5A25A]">a decade of distinguished legal practice</span>, we bring clarity, strategy, and precision to every case. Our chambers specialize in civil, criminal, and corporate law, guided by the belief that justice must be accessible, fair, and fearless.
+              <span className="font-semibold text-[#C5A25A]">Jitender Solanki</span>, the founder of our chambers,
+              is a dedicated and result-oriented legal professional known for his sharp advocacy,
+              strategic insights, and unwavering commitment to justice. With years of experience in
+              handling <span className="font-semibold">civil, criminal, family, revenue, and corporate matters</span>,
+              he has earned a reputation for providing strong, clear, and dependable legal representation.
             </p>
 
-            <p className="text-black leading-relaxed text-base sm:text-lg">
-              We pride ourselves on discretion, diligence, and dedication. From courtroom representation to corporate counsel, every client is treated with respect and confidentiality. Advocates carry the responsibility of bridging individuals and justice — by representing clients with integrity we strive to make a tangible difference in people&apos;s lives and contribute to the greater good of society. This passion for law and dedication to service is what drives our firm.
+            <p className="mb-4 text-base sm:text-lg leading-relaxed text-black">
+              He believes that every client deserves not only competent advocacy but also respect,
+              empathy, and complete transparency. His approach combines legal excellence,
+              ethical practice, and a client-first mindset, making him a trusted name among individuals,
+              businesses, and institutions seeking reliable legal support.
+            </p>
+
+            <p className="text-base sm:text-lg leading-relaxed text-black">
+              Jitender Solanki’s commitment to fairness, justice, and public service forms
+              the foundation of our chambers. Under his leadership, we continue to deliver
+              comprehensive legal solutions with integrity, diligence, and professionalism — ensuring
+              that every client receives focused attention and the highest standard of representation.
             </p>
           </motion.div>
         </div>

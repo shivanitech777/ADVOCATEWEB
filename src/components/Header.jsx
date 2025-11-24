@@ -52,9 +52,9 @@ const nav = [
   { href: "/contact", label: "Contact Us" },
   {
     submenu: [
-      { href: "/new-criminal-law", label: "New Criminal Law" },
       { href: "/bare-act", label: "Bare Act" },
-      { href: "/court-calendar", label: "Court Calendar" }
+      { href: "/court-calendar", label: "Court Calendar" },
+      { href: "/new-criminal-law", label: "New Criminal Law" },
     ],
     label: "More",
   }
@@ -71,21 +71,19 @@ export default function Header() {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
 
+  // scroll behaviour
   useEffect(() => {
     const controlNavbar = () => {
       if (typeof window !== 'undefined') {
         const currentScrollY = window.scrollY;
 
-        // Control visibility
         if (currentScrollY > lastScrollY && currentScrollY > 100) {
           setIsVisible(false);
         } else {
           setIsVisible(true);
         }
 
-        // Control background
         setIsScrolled(currentScrollY > 50);
-
         setLastScrollY(currentScrollY);
       }
     };
@@ -97,6 +95,18 @@ export default function Header() {
       };
     }
   }, [lastScrollY]);
+
+  // ✅ Mobile: jab bhi menu open ho, "More" ko default open rakho
+  useEffect(() => {
+    if (open && openSubmenu === null) {
+      const moreIndex = nav.findIndex(
+        (item) => item.label === "More" && item.submenu
+      );
+      if (moreIndex !== -1) {
+        setOpenSubmenu(moreIndex);
+      }
+    }
+  }, [open, openSubmenu]);
 
   return (
     <motion.header
@@ -135,7 +145,7 @@ export default function Header() {
           </div>
         </Link>
 
-
+        {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-6 text-[17px]">
           {nav.map((item, i) =>
             item.submenu ? (
@@ -232,9 +242,16 @@ export default function Header() {
           )}
         </nav>
 
-
+        {/* Mobile hamburger */}
         <button
-          onClick={() => setOpen(!open)}
+          onClick={() => {
+            setOpen(!open);
+            // menu band karte time submenus reset
+            if (open) {
+              setOpenSubmenu(null);
+              setOpenSubSubmenu(null);
+            }
+          }}
           className="lg:hidden p-2 bg-gray-100 hover:bg-gray-200 rounded-md transition"
         >
           {open ? (
@@ -249,7 +266,7 @@ export default function Header() {
         </button>
       </div>
 
-
+      {/* Mobile nav */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -264,7 +281,9 @@ export default function Header() {
                 item.submenu ? (
                   <div key={i}>
                     <button
-                      onClick={() => setOpenSubmenu(openSubmenu === i ? null : i)}
+                      onClick={() =>
+                        setOpenSubmenu(openSubmenu === i ? null : i)
+                      }
                       className="w-full text-left flex items-center justify-between font-semibold text-gray-800 py-3 px-3 rounded hover:bg-gray-50"
                     >
                       <span className="text-base md:text-lg">{item.label}</span>
@@ -292,7 +311,11 @@ export default function Header() {
                             sub.submenu ? (
                               <div key={j}>
                                 <button
-                                  onClick={() => setOpenSubSubmenu(openSubSubmenu === `${i}-${j}` ? null : `${i}-${j}`)}
+                                  onClick={() =>
+                                    setOpenSubSubmenu(
+                                      openSubSubmenu === `${i}-${j}` ? null : `${i}-${j}`
+                                    )
+                                  }
                                   className="w-full text-left flex items-center justify-between text-sm md:text-base font-medium text-gray-700 py-2 px-3 rounded hover:bg-gray-50"
                                 >
                                   <span>{sub.label}</span>
@@ -385,7 +408,11 @@ export default function Header() {
                       target={item.href?.startsWith("http") ? "_blank" : "_self"}
                       rel="noopener noreferrer"
                       className="block text-gray-800 hover:text-[#C5A25A] transition-colors py-3 px-3 rounded hover:bg-gray-50 text-base md:text-lg font-semibold"
-                      onClick={() => setOpen(false)}
+                      onClick={() => {
+                        setOpen(false);
+                        setOpenSubmenu(null);
+                        setOpenSubSubmenu(null);
+                      }}
                     >
                       {item.label}
                     </Link>
