@@ -54,7 +54,6 @@ const nav = [
     submenu: [
       { href: "/bare-act", label: "Bare Act" },
       { href: "/court-calendar", label: "Court Calendar" },
-      { href: "/new-criminal-law", label: "New Criminal Law" },
     ],
     label: "More",
   }
