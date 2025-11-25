@@ -35,7 +35,7 @@ export default function AboutPage({ show }) {
           >
             <div className="w-full h-[260px] sm:h-[360px] md:h-[480px] overflow-hidden shadow-xl border border-[#C5A25A]/20">
               <Image
-                src="/hn.jpg"
+                src="/jitender-solanki.jpg"
                 alt="Advocate Portrait"
                 width={800}
                 height={500}
