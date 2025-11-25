@@ -108,6 +108,7 @@ const BareAct = () => {
                 description="Access comprehensive collection of Indian laws and legislative acts for legal research and reference."
                 banner="/img4.jpg"
                 mobileBanner="/img4.jpg"
+                show={false}
             />
 
             <div className="max-w-6xl mx-auto px-4 py-12 md:py-20">

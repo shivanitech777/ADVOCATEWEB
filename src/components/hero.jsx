@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 
-export default function Hero({ heading, subtitle, description, banner, mobileBanner }) {
+export default function Hero({ heading, subtitle, description, banner, mobileBanner, show = true }) {
 
   const scrollToNext = () => {
     const aboutSection = document.getElementById('about');
@@ -48,7 +48,7 @@ export default function Hero({ heading, subtitle, description, banner, mobileBan
               </p>
             )}
 
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+            {show && <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 bg-[#C5A25A] text-black font-semibold rounded-none hover:opacity-95"
@@ -56,7 +56,7 @@ export default function Hero({ heading, subtitle, description, banner, mobileBan
                 Book Consultation
               </a>
 
-            </div>
+            </div>}
           </motion.div>
         </motion.div>
       </div>
